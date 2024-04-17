@@ -1,0 +1,17 @@
+.wp-block-carbon-blocks-message {
+	> p{
+		min-width:50px !important;
+		line-height: 1.5 !important;
+	}
+	.block-list-appender {
+    position: initial;
+    padding-right: 10px;
+	}
+	.block-editor-block-variation-picker__variations.block-editor-block-variation-picker__variations>li {
+		width: fit-content;
+	}
+  .components-button svg{
+    height:30px;
+    width:30px;
+  }
+}

@@ -1,0 +1,85 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carbon-blocks/masonry",
+	"version": "1.0.0",
+	"category": "carbon-blocks",
+	"supports": {
+		"html": false,
+    "anchor": true,
+		"customClassName": true,
+		"multiple": true,
+		"reusable": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"gradients": true,
+			"link": false,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": false
+			}
+		},
+		"spacing": {
+			"blockGap": true,
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	},
+	"attributes": {
+		"images": {
+			"type": "array",
+			"default": []
+		},
+		"uid": {
+			"type": "string",
+			"default": ""
+		},
+		"columns": {
+			"type": "number",
+			"default": 4
+		},
+		"showCaption": {
+			"type": "boolean",
+			"default": false
+		},
+		"sizes": {
+			"type": "object"
+		},
+    "allowZoom": {
+      "type": "boolean",
+      "default": true
+    },
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"blockGap": "10px"
+				}
+			}
+		}
+	},
+	"usesContext": [],
+	"providesContext": {},
+	"textdomain": "carbon-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
+}

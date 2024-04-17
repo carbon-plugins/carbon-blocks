@@ -1,0 +1,22 @@
+.wp-block-carbon-blocks-accordion-item {
+	summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    gap:10px;
+		cursor: pointer;
+		&:hover {
+			background: none;
+		}
+		&::after {
+			content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 %3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E");
+			transition: transform 0.15s ease-out;
+			height: 24px;
+		}
+	}
+	&[open] {
+		summary::after {
+			transform: rotate(180deg);
+		}
+	}
+}

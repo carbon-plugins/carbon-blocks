@@ -1,0 +1,42 @@
+.wp-block-carbon-blocks-accordion {
+	details:not(:first-of-type) {
+		border-top: 
+			var(--accordion-separator-width)
+			var(--accordion-separator-style)
+			var(--accordion-separator-color);
+	}
+	&.is-style-modern{
+		border:1px solid #e5e7eb;
+		border-radius: 0.75rem;
+		> article {
+			> button{
+				display: flex;
+				padding: 1.25rem;
+				color: #6B7280;
+				font-weight: 500;
+				text-align: left;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				border-width: 1px;
+				border-bottom-width: 0;
+				border-color: #E5E7EB;
+
+				&:hover {
+					background-color: #F3F4F6;
+				}
+			}
+			&:not(:first-of-type){
+				border-color:#e5e7eb;
+			}
+			&:first-of-type > button{
+				border-top-left-radius: 0.75rem;
+				border-top-right-radius: 0.75rem;
+			}
+			&:last-of-type > button{
+				border-bottom-left-radius:.75rem;
+				border-bottom-right-radius: 0.75rem;
+			}
+		}
+	}
+}

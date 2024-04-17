@@ -1,0 +1,104 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carbon-blocks/testimonial-grid",
+	"version": "1.0.0",
+	"category": "carbon-blocks",
+	"supports": {
+		"html": false,
+    "anchor": true,
+		"customClassName": true,
+		"multiple": true,
+		"reusable": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"blockGap": true,
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"layout": {
+			"allowSwitching": false,
+			"allowEditing": true,
+			"allowInheriting": false,
+			"allowSizingOnChildren": true,
+			"allowVerticalAlignment": false,
+			"allowJustification": true,
+			"allowOrientation": false,
+			"allowCustomContentAndWideSize": false,
+			"default": {
+				"type": "flex",
+				"orientation": "horizontal",
+				"justifyContent": "center",
+				"verticalAlignment": "stretch",
+				"flexWrap": "wrap"
+			}
+		},
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+			"__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+			"__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    },
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	},
+	"attributes": {
+		"showActions": {
+			"type": "boolean",
+			"default": true
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"columns": {
+			"type": "number",
+			"default": 2
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"blockGap": "10px"
+				}
+			}
+		}
+	},
+	"usesContext": [],
+	"providesContext": {},
+	"textdomain": "carbon-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

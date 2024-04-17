@@ -1,0 +1,24 @@
+@import "./vendor/text-animation";
+@import "./vendor/animate";
+@import "./vendor/lightbox";
+
+/*
+@import "./../node_modules/swiper/swiper.min.css";
+@import "./../node_modules/swiper/modules/a11y.min.css";
+@import "./../node_modules/swiper/modules/effect-fade.min.css";
+@import "./../node_modules/swiper/modules/effect-cube.min.css";
+@import "./../node_modules/swiper/modules/effect-flip.min.css";
+@import "./../node_modules/swiper/modules/free-mode.min.css";
+@import "./../node_modules/swiper/modules/navigation.min.css";
+@import "./../node_modules/swiper/modules/pagination.min.css";
+@import "./../node_modules/swiper/modules/scrollbar.min.css";*/
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
+}
+
+.lightbox {
+	img {
+		cursor: zoom-in;
+	}
+}

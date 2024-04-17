@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@import 'react-toastify/scss/variables';
+@import 'react-toastify/scss/toastContainer';
+@import 'react-toastify/scss/toast';
+@import 'react-toastify/scss/closeButton';
+@import 'react-toastify/scss/progressBar';
+@import 'react-toastify/scss/icons';
+
+// entrance and exit animations
+@import 'react-toastify/scss/animations/bounce.scss';
+@import 'react-toastify/scss/animations/zoom.scss';
+@import 'react-toastify/scss/animations/flip.scss';
+@import 'react-toastify/scss/animations/slide.scss';
+@import 'react-toastify/scss/animations/spin.scss';
+
+.Toastify__toast-container--top-right {
+	top: calc(102px + 1em);
+	right: 1em;
+}
+
+.#{$rt-namespace}__toast {
+	background: var(--toastify-color-light);
+	color: var(--toastify-text-color-light);
+  &-theme--colored#{&}--default {
+    background: var(--toastify-color-light);
+    color: var(--toastify-text-color-light);
+  }
+  &-theme--colored#{&}--info {
+    color: var(--toastify-text-color-info);
+    background: var(--toastify-color-info);
+  }
+  &-theme--colored#{&}--success {
+    color: var(--toastify-text-color-success);
+    background: var(--toastify-color-success);
+  }
+  &-theme--colored#{&}--warning {
+    color: var(--toastify-text-color-warning);
+    background: var(--toastify-color-warning);
+  }
+  &-theme--colored#{&}--error {
+    color: var(--toastify-text-color-error);
+    background: var(--toastify-color-error);
+  }
+}
+
+.#{$rt-namespace}__progress-bar {
+  background: hsl(var(--crbn-foreground));
+  &--info {
+    background: hsl(var(--crbn-foreground));
+  }
+  &--success {
+    background: hsl(var(--crbn-valid));
+  }
+  &--warning {
+    background: var(--toastify-color-progress-warning);
+  }
+  &--error {
+    background: hsl(var(--crbn-error));
+  }
+  &-theme--colored#{&}--info,
+  &-theme--colored#{&}--success,
+  &-theme--colored#{&}--warning,
+  &-theme--colored#{&}--error {
+    background: var(--toastify-color-transparent);
+  }
+}
+.dark {
+	.#{$rt-namespace}__toast {
+		background: hsl(var(--crbn-background));
+		color: hsl(var(--crbn-foreground));
+		border: solid 1px hsl(var(--crbn-muted));
+	}
+}
+

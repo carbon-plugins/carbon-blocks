@@ -1,0 +1,38 @@
+.wp-block-carbon-blocks-tabs {
+	padding: 1px;
+	.tabHead {
+		position: relative;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+		p {
+			border: none;
+			margin: 0;
+			padding: 20px;
+			transition: border-color .2s, color .2s, background-color .2s;
+			border-bottom: 2px solid transparent;
+			z-index: 1;
+			position: relative;
+			background: white;
+			font-size: 1rem;
+			&.is-active{
+				z-index: 2;
+			}
+			&:hover{
+				cursor:pointer;
+				text-decoration: none;
+				&:not(.is-active) {
+					background-color: #eee;
+				}
+			}
+			&:focus{
+				z-index: 2;
+			}
+		}
+	}
+}
+.tab-name-input{
+	input {
+		min-width: 200px;
+	}
+}

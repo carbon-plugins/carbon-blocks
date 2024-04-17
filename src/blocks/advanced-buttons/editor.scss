@@ -1,0 +1,11 @@
+.wp-block-carbon-blocks-advanced-buttons {
+	min-height: 50px;
+	display: flex;
+	align-items: center;
+	.wp-carbon-buttons__prompt {
+		padding: 6px;
+	}
+	> div {
+		position: relative;
+	}
+}

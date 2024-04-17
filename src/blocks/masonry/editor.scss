@@ -1,0 +1,27 @@
+.wp-block-carbon-blocks-masonry {
+	min-height: 200px;
+	.components-placeholder__illustration {
+		pointer-events: none;
+	}
+	&:has(.components-placeholder) {
+		display: flex !important;
+	}
+	&.is-selected {
+		.components-placeholder {
+			background-color: white;
+			color: black;
+			&::before {
+				opacity: 0;
+			}
+			&__illustration {
+				display: none;
+				opacity: 0;
+			}
+		}
+	}
+	figure {
+		img {
+			cursor: initial;
+		}
+	}
+}

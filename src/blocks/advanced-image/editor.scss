@@ -1,0 +1,25 @@
+.wp-block-carbon-blocks-advanced-image {
+	.components-placeholder__illustration {
+		pointer-events: none;
+	}
+	&.is-selected {
+		.components-placeholder {
+			background-color: #fff;
+			border: none;
+			border-radius: 2px;
+			box-shadow: inset 0 0 0 1px #1e1e1e;
+			color: #1e1e1e;
+			filter: none!important;
+			&::before {
+				opacity: 0;
+			}
+			&__illustration {
+				display: none;
+				opacity: 0;
+			}
+		}
+	}
+	img {
+		cursor: initial;
+	}
+}

@@ -1,0 +1,14 @@
+.wp-block-carbon-blocks-advanced-buttons {
+	padding-left: 0;
+	display: flex;
+	list-style: none;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	a {
+		color: inherit;
+	}
+	.wp-block-carbon-blocks-advanced-button:only-child {
+		margin-bottom: 0;
+	}
+}

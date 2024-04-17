@@ -1,0 +1,47 @@
+.wp-block-carbon-blocks-advanced-image {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	&.alignfull {
+		> img, > a {
+			height: auto;
+			width: 100%;
+		}
+	}
+	&.alignwide {
+		> img, > a {
+			height: auto;
+			width: 100%;
+		}
+	}
+	figcaption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 5px;
+		background: rgba(0, 0, 0, .6);
+    color: white;
+		font-size: .9rem;
+    box-sizing: border-box;
+	}
+	img {
+    max-width: 100%;
+    display: block;
+		&[src=""] {
+			height: 300px;
+			content: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+			background: #EBEBEB;
+			border: 1px solid #aaa;
+		}
+	}
+	a {
+		width: fit-content;
+	}
+}

@@ -1,0 +1,167 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carbon-blocks/advanced-image",
+	"version": "1.0.0",
+	"category": "carbon-blocks",
+	"supports": {
+		"html": false,
+    "anchor": true,
+		"customClassName": true,
+		"multiple": true,
+		"reusable": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"gradients": true,
+			"link": false,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": false
+			}
+		},
+		"spacing": {
+			"blockGap": false,
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true,
+				"blockGap": false
+			}
+		},
+		"layout": {
+			"allowSwitching": false,
+			"allowInheriting": false,
+			"allowEditing": false,
+			"default": {
+				"type": "flex"
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+			"__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+			"__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+	},
+	"attributes": {
+		"showActions": {
+			"type": "boolean",
+			"default": true
+		},
+    "showCaption": {
+      "type": "boolean",
+      "default": false
+    },
+    "allowZoom": {
+      "type": "boolean",
+      "default": false
+    },
+    "focalPoint": {
+      "type": "object",
+      "default": { "x": 0.5, "y": 0.5 }
+    },
+		"rotation": {
+			"type": "number",
+			"default": 0
+		},
+		"isFlippedVertically": {
+			"type": "boolean",
+			"default": false
+		},
+		"isFlippedHorizontally": {
+			"type": "boolean",
+			"default": false
+		},
+		"isChild": {
+			"type": "boolean",
+			"default": false
+		},
+		"uid": {
+			"type": "string",
+			"default": ""
+		},
+		"post": {
+			"type": "object"
+		},
+		"align": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "src",
+			"__experimentalRole": "content"
+		},
+		"alt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "alt",
+			"default": "",
+			"__experimentalRole": "content"
+		},
+		"caption": {
+			"type": "string",
+			"source": "html",
+			"selector": "figcaption",
+			"default": "",
+			"__experimentalRole": "content"
+		},
+		"title": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "title",
+			"__experimentalRole": "content"
+		},
+		"id": {
+			"type": "number",
+			"__experimentalRole": "content"
+		},
+		"width": {
+			"type": "string"
+		},
+		"height": {
+			"type": "string"
+		},
+		"aspectRatio": {
+			"type": "string"
+		},
+		"scale": {
+			"type": "string",
+			"default": "cover"
+		},
+		"sizeSlug": {
+			"type": "string"
+		}
+	},
+	"usesContext": [],
+	"providesContext": {},
+	"textdomain": "carbon-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,17 @@
+.wp-block-carbon-blocks-tab {
+	padding:20px;
+	&:not(.is-active){
+    display:none;
+  }
+	> p {
+		margin: 0;
+	}
+	.wp-block-column > *:last-child {
+		margin-bottom: 0 !important;
+	}
+	.wp-block-column {
+		.wp-block-carbon-blocks-key-numbers {
+			padding: 0;
+		}
+	}
+}

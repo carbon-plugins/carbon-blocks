@@ -1,0 +1,114 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carbon-blocks/accordion-item",
+	"version": "1.0.0",
+	"category": "carbon-blocks",
+	"supports": {
+		"html": false,
+    "anchor": true,
+		"customClassName": true,
+		"multiple": true,
+		"reusable": true,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": false,
+			"background": true,
+			"text": true,
+			"__experimentalDefaultControls": {
+				"text": true,
+				"background": true
+			}
+		},
+		"spacing": {
+			"blockGap": false,
+			"margin": false,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": true,
+				"blockGap": false
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": false,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": false,
+				"style": true,
+				"width": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"layout": {
+			"allowEditing": false
+		},
+		"interactivity": {
+			"clientNavigation": true
+		}
+	},
+	"attributes": {
+		"showActions": {
+			"type": "boolean",
+			"default": true
+		},
+		"showContent": {
+			"type": "boolean",
+			"default": false
+		},
+		"summary": {
+			"type": "rich-text",
+			"source": "rich-text",
+			"selector": "summary"
+		},
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h4"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"crossColor": {
+			"type": "string",
+			"default": "black"
+		},
+		"name": {
+			"type": "string"
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"padding": "20px"
+				}
+			}
+		}
+	},
+	"usesContext": [
+		"carbon-blocks/name"
+	],
+	"providesContext": {},
+	"textdomain": "carbon-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

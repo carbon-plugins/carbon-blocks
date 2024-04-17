@@ -1,0 +1,16 @@
+.wp-block-carbon-blocks-message {
+	gap: .5rem;
+	padding: 10px;
+	&[data-slug="message-info"],  &[data-slug="message-alert"],  &[data-slug="message-custom"]{
+		display: flex;
+		height: auto;
+		display: flex;
+		align-items: center;
+		p, span{
+			margin: 0;
+		}
+	}
+  > p{
+    word-break: break-word;
+  }
+}

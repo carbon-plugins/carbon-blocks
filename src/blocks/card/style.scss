@@ -1,0 +1,30 @@
+.wp-block-carbon-blocks-card {
+	height: auto;
+	overflow: hidden;
+	position: relative;
+  > a{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+  }
+	@media screen and (max-width: 576px) {
+		width: 100% !important;
+	}
+	h1, h2, h3, h4, h5, h6, p {
+    word-break: break-all;
+		width: 100%;
+	}
+	.wp-block-carbon-blocks-buttons {
+		margin: 0;
+		margin-top: auto;
+		.wp-block-carbon-blocks-button {
+			width: 100%;
+			a {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

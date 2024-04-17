@@ -1,0 +1,13 @@
+.wp-block-carbon-blocks-logo-slide {
+	&.swiper-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		//max-height: 75px;
+		img {
+			padding: 40px 20px;
+			object-fit: contain;
+			pointer-events: none;
+		}
+	}
+}

@@ -1,0 +1,112 @@
+@import "./../../public/assets/vendor/animate.scss";
+@import "../../src/assets/styles/text-animation.scss";
+
+.edit-post-layout {
+	.block-editor-block-inspector .components-base-control.block-editor-color-gradient-control {
+		margin-bottom: 0;
+	}
+	.components-toolbar-button.rank-math-link-control {
+		display: none;
+	}
+	.editor-styles-wrapper {
+    margin-bottom: 40px;
+	}
+	.block-editor-button-block-appender {
+		background-color: rgba(white, .2);
+		min-width: 48px;
+	}
+	.edit-post-visual-editor, .interface-navigable-region {
+		overflow-x: hidden;
+	}
+}
+
+.popover-slot {
+	.components-input-control__input {
+		width: fit-content !important;
+	}
+	.components-toggle-control {
+		margin-bottom: 0;
+	}
+	.block-editor-url-input > div {
+		margin-bottom: 0;
+	}
+}
+
+.is-hidden {
+	opacity: 0 !important;
+	transition-duration: 0s !important
+}
+
+.carbon-blocks-animation-modal {
+	.components-modal__content {
+		> section * {
+			pointer-events: none;
+		}
+	}
+}
+
+.carbon-blocks-delete-modal {
+	.components-modal{
+		&__content {
+			section {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+			p {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.block-editor-button-block-appender.components-button.components-button.button-appender-sm {
+	padding: 4px;
+	width: fit-content;
+	width: 30px;
+	height: 30px;
+	min-width: 30px;
+}
+
+.components-tab-panel__tab-content:has(.carbon-blocks-color-panel) {
+	display: flex;
+	flex-direction: column;
+}
+.components-tab-panel__tab-content:has(.carbon-blocks-color-panel) > *{
+	order: 2;
+}
+.components-tab-panel__tab-content:has(.carbon-blocks-color-panel) > div:last-child {
+	order: 1;
+}
+
+.carbon-blocks-color-panel {
+	&__is-child {
+		padding: 0 !important;
+		.block-editor-tools-panel-color-gradient-settings__item:nth-child(1) {
+			border-top: none;
+			border-top-left-radius: initial;
+			border-top-right-radius: initial;
+			margin: 0;
+		}
+	}
+}
+
+.carbon-setting {
+	position: absolute;
+	z-index: 100;
+	width: 20px !important;
+	height: 20px;
+	top: 0;
+	color: white;
+	line-height: .8;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.3);
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+}
+
+.components-base-control div[role="radiogroup"].is-disabled{
+  opacity:0.4;
+  pointer-events: none;
+}

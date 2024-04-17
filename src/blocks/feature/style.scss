@@ -1,0 +1,25 @@
+.wp-block-carbon-blocks-feature {
+  word-break:break-word;
+	position: relative;
+	box-sizing: border-box;
+	.wp-block-carbon-blocks-icon {
+		width: fit-content;
+	}
+	ul {
+		width: 100%;
+	}
+	&.is-style-modern{
+		padding: 1.5rem;
+		background-color: #ffffff;
+		border-radius: 0.5rem;
+		border-width: 1px;
+		border-color: #E5E7EB;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	}
+	h3{
+		margin: 0;
+	}
+  p{
+    margin: 0;
+  }
+}

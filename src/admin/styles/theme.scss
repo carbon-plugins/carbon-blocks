@@ -1,0 +1,57 @@
+@mixin theme-light {
+	--crbn-radius: .5rem;
+	--crbn-container-radius: calc(var(--crbn-radius) - 2px);
+	--crbn-sidebar: 200px;
+	--crbn-adminbar: 50px;
+	--crbn-gap: .5rem;
+	--crbn-valid: 142.1 76.2% 36.3%;
+	--crbn-valid-foreground: 142.1 50% 97.3%;
+	--crbn-error: 0 72.2% 50.6%;
+	--crbn-error-foreground: 355.7 100% 97.3%;
+	--crbn-shadow:  0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+	--crbn-background: 0 0% 100%;
+	--crbn-foreground: 240 10% 3.9%;
+	--crbn-card: 0 0% 100%;
+	--crbn-card-foreground: 240 10% 3.9%;
+	--crbn-popover: 0 0% 100%;
+	--crbn-popover-foreground: 240 10% 3.9%;
+	--crbn-primary: 240 5.9% 10%;
+	--crbn-primary-foreground: 0 0% 98%;
+	--crbn-secondary: 240 4.8% 95.9%;
+	--crbn-secondary-foreground: 240 5.9% 10%;
+	--crbn-muted: 240 4.8% 95.9%;
+	--crbn-muted-foreground: 240 3.8% 46.1%;
+	--crbn-accent: 240 4.8% 95.9%;
+	--crbn-accent-foreground: 240 5.9% 10%;
+	--crbn-destructive: 0 84.2% 60.2%;
+	--crbn-destructive-foreground: 0 0% 98%;
+	--crbn-border: 240 5.9% 90%;
+	--crbn-input: 240 5.9% 90%;
+	--crbn-ring: 240 5.9% 10%;
+	--crbn-valid: 142.1 76.2% 36.3%;
+	--crbn-valid-foreground: 355.7 100% 97.3%;
+}
+
+@mixin theme-dark {
+	--crbn-background: 240 10% 3.9%;
+	--crbn-foreground: 0 0% 98%;
+	--crbn-card: 240 10% 3.9%;
+	--crbn-card-foreground: 0 0% 98%;
+	--crbn-popover: 240 10% 3.9%;
+	--crbn-popover-foreground: 0 0% 98%;
+	--crbn-primary: 0 0% 98%;
+	--crbn-primary-foreground: 240 5.9% 10%;
+	--crbn-secondary: 240 3.7% 15.9%;
+	--crbn-secondary-foreground: 0 0% 98%;
+	--crbn-muted: 240 3.7% 15.9%;
+	--crbn-muted-foreground: 240 5% 64.9%;
+	--crbn-accent: 240 3.7% 15.9%;
+	--crbn-accent-foreground: 0 0% 98%;
+	--crbn-destructive: 0 72.2% 50.6%;
+	--crbn-destructive-foreground: 0 85.7% 97.3%;
+	--crbn-border: 240 3.7% 15.9%;
+	--crbn-input: 240 3.7% 15.9%;
+	--crbn-ring: 240 4.9% 83.9%;
+	--crbn-valid: 142.1 70.6% 45.3%;
+	--crbn-valid-foreground: 144.9 80.4% 10%;
+}

@@ -1,0 +1,21 @@
+.wp-block-carbon-blocks-testimonial-grid {
+	blockquote {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	@media screen and (min-width: 768px) {
+		blockquote {
+			width: var(--testimonial-size-md);
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		blockquote {
+			width: var(--testimonial-size-lg);
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		blockquote {
+			width: var(--testimonial-size-xl);
+		}
+	}
+}

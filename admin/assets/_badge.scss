@@ -1,0 +1,51 @@
+@mixin badge {
+	color:var(--blue-400);
+	border:1px solid var(--blue-400);
+	background:white;
+	text-transform:uppercase;
+	border-radius:3px;
+	font-size:12px;
+	line-height:13px;
+	padding:5px 10px;
+	font-weight: 900;
+	display: block;
+	width:fit-content;
+	text-align: center;
+	> span {
+		width: 5px;
+		height: 5px;
+		display: flex;
+		border-radius: 50%;
+	}
+	&.major{
+		color:var(--red);
+		border-color:var(--red);
+		background-color: var(--light-red);
+		> span {
+			background-color: var(--red);
+		}
+	}
+	&.minor{
+		color:var(--green);
+		border-color:var(--green);
+		background-color: var(--light-green);
+		> span {
+			background-color: var(--green);
+		}
+	}
+	&.patch{
+		color:var(--brown);
+		border-color:var(--brown);
+		background-color: var(--yellow);
+	}
+	&.is-new{
+		border-color:var(--blue-500);
+		color:var(--blue-400);
+		background-color:var(--blue-50);
+	}
+	&.is-coming{
+		border-color:var(--grey);
+		color:var(--grey);
+		background-color: var(--light-grey);
+	}
+}

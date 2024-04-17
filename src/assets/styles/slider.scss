@@ -1,0 +1,30 @@
+.swiper {
+	.swiper-wrapper {
+		display: flex;
+		align-items: center;
+		padding:0;
+	}
+	.swiper-button-next, .swiper-button-prev {
+		background: none;
+		border: none;
+		transform: translateY(-50%);
+		width: fit-content;
+		height: fit-content;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	.swiper-pagination {
+		padding: 7px 10px;
+		border-radius: 5px;
+		line-height: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: fit-content;
+	}
+	&.pagination-is-outside {
+		padding-bottom: 20px;
+		.swiper-button-next, .swiper-button-prev {
+			transform: translateY(calc(-50% - 20px));
+		}
+	}
+}

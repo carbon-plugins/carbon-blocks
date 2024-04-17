@@ -1,0 +1,23 @@
+.wp-block-carbon-blocks-divider {
+	position:relative;
+  z-index:1000;
+  margin-block-start: 0 !important;
+  margin:0;
+  height: calc(var(--divider-height) / 2);
+  > svg{
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+  }
+
+  
+  @media screen and (min-width: 1200px) {
+    height: var(--divider-height);
+  }
+}
+.wp-block-carbon-blocks-divider + *{
+  margin-block-start: 0 !important;
+  margin:0;
+}

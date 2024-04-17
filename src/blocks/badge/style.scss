@@ -1,0 +1,9 @@
+.wp-block-carbon-blocks-badge {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  width:fit-content;
+	> section:has(span:empty) {
+		display: none !important;
+	}
+}

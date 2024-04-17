@@ -1,0 +1,24 @@
+.wp-block-carbon-blocks-cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	article{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	@media screen and (min-width: 768px) {
+		article {
+			width: var(--card-size-md);
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		article {
+			width: var(--card-size-lg);
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		article {
+			width: var(--card-size-xl);
+		}
+	}
+}

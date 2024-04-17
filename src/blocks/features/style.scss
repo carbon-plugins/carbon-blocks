@@ -1,0 +1,23 @@
+.wp-block-carbon-blocks-features {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	article {
+		width: 100%;
+	}
+	@media screen and (min-width: 768px) {
+		article {
+			width: var(--feature-size-md);
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		article {
+			width: var(--feature-size-lg);
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		article {
+			width: var(--feature-size-xl);
+		}
+	}
+}

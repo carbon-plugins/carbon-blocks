@@ -1,0 +1,88 @@
+.carbon-blocks-inserter-modal {
+	max-width: 1500px;
+	&__return {
+		position: absolute;
+		top: 25px;
+		z-index: 10;
+		right: 70px;
+	}
+	&__content {
+		display: flex;
+		gap: 20px;
+    height: 100%;
+		flex-direction: column;
+	}
+	&__inserter {
+		flex: 1;
+		textarea {
+			height: 100%;
+		}
+		div {
+			height: 100%;
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+		}
+		> div > div {
+			margin-bottom: 0;
+		}
+	}
+	&__preview {
+		width: 80%;
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__render {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		label {
+			font-size: 11px;
+			font-weight: 500;
+			line-height: 1.4;
+			text-transform: uppercase;
+			display: inline-block;
+			margin-bottom: calc(8px);
+			padding: 0px;
+		}
+		> div:not(.components-notice) {
+			padding: 20px;
+			border: 1px solid rgb(148, 148, 148);
+			border-radius: 2px;
+			width: 100%;
+			aspect-ratio: 1/1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		footer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 20px;
+			margin-top: 20px;
+		}
+		.components-range-control {
+			min-width: 300px;
+			div {
+				margin: 0;
+			}
+		}
+	}
+	&__error {
+    margin: 20px 0 0 0;
+	}
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	@media screen and (min-width: 768px) {
+		&__content {
+			flex-direction: row;
+		}
+	}
+}

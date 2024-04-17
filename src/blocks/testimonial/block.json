@@ -1,0 +1,100 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carbon-blocks/testimonial",
+	"version": "1.0.0",
+	"category": "carbon-blocks",
+	"supports": {
+		"html": false,
+    "anchor": true,
+		"customClassName": true,
+		"multiple": true,
+		"reusable": true,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": false,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"blockGap": true,
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"layout": {
+			"allowSwitching": false,
+			"allowEditing": false,
+			"allowInheriting": false,
+			"allowSizingOnChildren": false,
+			"allowVerticalAlignment": false,
+			"allowJustification": false,
+			"allowOrientation": false,
+			"default": {
+				"flexWrap": "nowrap"
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+			"__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+			"__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+	},
+	"attributes": {
+		"showActions": {
+			"type": "boolean",
+			"default": true
+		},
+		"isSlide": {
+			"type": "boolean",
+			"default": false
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"padding": "20px",
+					"blockGap": "15px"
+				}
+			}
+		}
+	},
+	"usesContext": [],
+	"providesContext": {},
+	"textdomain": "carbon-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

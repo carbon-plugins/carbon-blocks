@@ -1,0 +1,31 @@
+.interface-interface-skeleton__sidebar {
+	.block-editor-link-control {
+		min-width: 100%;
+		max-width: 100%;
+		.block-editor-link-control__tools {
+			padding: 16px 0;
+		}
+		.block-editor-link-control__search-input {
+			margin: 16px 0;
+		}
+	}
+}
+.wp-block-carbon-blocks-card {
+	a {
+		pointer-events: none !important;
+		span {
+			cursor: text;
+		}
+	}
+	.components-placeholder{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+		&__illustration {
+			pointer-events: none;
+		}
+	}
+	.wp-block-carbon-blocks-advanced-image {
+		margin: 0;
+		width: 100%;
+	}
+}
