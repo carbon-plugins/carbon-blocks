@@ -133,18 +133,18 @@ html {
 	@include theme-light;
 }
 
-html.dark {
-	@include theme-dark;
-}
+// html.dark {
+// 	@include theme-dark;
+// }
 
-@media (prefers-color-scheme: dark) {
-	html {
-		@include theme-dark;
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	html {
+// 		@include theme-dark;
+// 	}
+// }
 
-@media (prefers-color-scheme: light) {
-	html {
-		@include theme-light;
-	}
-}
+// @media (prefers-color-scheme: light) {
+// 	html {
+// 		@include theme-light;
+// 	}
+// }
