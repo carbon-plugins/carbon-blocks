@@ -21,9 +21,9 @@ export default function License() {
 					<CardContent>
 						<Alert>
 							<Info className="h-4 w-4"/>
-							<AlertTitle>{ __("You are currently using the free version of Carbon Icons", "carbon-icons") }</AlertTitle>
+							<AlertTitle>{ __("You are currently using the free version of Carbon Icons", "carbon-blocks") }</AlertTitle>
 							<AlertDescription>
-								{ __("You can choose a plan below to start taking advantage of thousands new icons, premium support and much more !", "carbon-icons") }
+								{ __("You can choose a plan below to start taking advantage of thousands new icons, premium support and much more !", "carbon-blocks") }
 							</AlertDescription>
 						</Alert>
 					</CardContent>
@@ -40,49 +40,39 @@ export default function License() {
 									<ul role="list" class="mb-8 space-y-4 text-left dark:text-gray-400">
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to WordPress blocks library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium blocks", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Dashicon library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Slider blocks", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Classic Icons library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium block animations", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to 7300+ Advanced Icons library", 'carbon-blocks' ) }</span>
+											<span>{ __( "More animations settings", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Animated library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium text animations", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Logo library", 'carbon-blocks' ) }</span>
-										</li>
-									</ul>
-									<ul role="list" class="mb-8 space-y-4 text-left dark:text-gray-400">
-										<li class="flex items-center space-x-3">
-											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Flag library", 'carbon-blocks' ) }</span>
+											<span>{ __( "4 premium icon libraries", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "License for 1 website", 'carbon-blocks' ) }</span>
+											<span>{ __( 'Futur updates', 'carbon-blocks' ) } <span class="font-bold">{ __( '12 months', 'carbon-blocks' ) }</span></span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( 'Futur updates for', 'carbon-blocks' ) } <span class="font-bold">{ __( '12 months', 'carbon-blocks' ) }</span></span>
+											<span>{ __( "Premium support for", 'carbon-blocks' ) } <span class="font-bold">{ __( '12 months', 'carbon-blocks' ) }</span></span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( 'Premium support for', 'carbon-blocks' ) } <span class="font-bold">{ __( '12 months', 'carbon-blocks' ) }</span></span>
-										</li>
-										<li class="flex items-center space-x-3">
-											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( 'Online chat access', 'carbon-blocks' ) }</span>
+											<span>{ __( 'Online chat access for', 'carbon-blocks' ) } <span class="font-bold">{ __( '12 months', 'carbon-blocks' ) }</span></span>
 										</li>
 									</ul>
 								</section>
@@ -120,37 +110,27 @@ export default function License() {
 									<ul role="list" class="mb-8 space-y-4 text-left dark:text-gray-400">
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to WordPress blocks library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium blocks", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Dashicon library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Slider blocks", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Classic Icons library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium block animations", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to 7300+ Advanced Icons library", 'carbon-blocks' ) }</span>
+											<span>{ __( "More animations settings", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Animated library", 'carbon-blocks' ) }</span>
+											<span>{ __( "Premium text animations", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Logo library", 'carbon-blocks' ) }</span>
-										</li>
-									</ul>
-									<ul role="list" class="mb-8 space-y-4 text-left dark:text-gray-400">
-										<li class="flex items-center space-x-3">
-											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "Access to Flag library", 'carbon-blocks' ) }</span>
-										</li>
-										<li class="flex items-center space-x-3">
-											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( "License for 1 website", 'carbon-blocks' ) }</span>
+											<span>{ __( "4 premium icon libraries", 'carbon-blocks' ) }</span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -158,11 +138,11 @@ export default function License() {
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( 'Premium support for', 'carbon-blocks' ) } <span class="font-bold">{ __( 'ever', 'carbon-blocks' ) }</span></span>
+											<span>{ __( "Premium support for", 'carbon-blocks' ) } <span class="font-bold">{ __( 'ever', 'carbon-blocks' ) }</span></span>
 										</li>
 										<li class="flex items-center space-x-3">
 											<svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-											<span>{ __( 'Online chat access', 'carbon-blocks' ) }</span>
+											<span>{ __( 'Online chat access', 'carbon-blocks' ) } <span class="font-bold">{ __( 'ever', 'carbon-blocks' ) }</span></span>
 										</li>
 									</ul>
 								</section>

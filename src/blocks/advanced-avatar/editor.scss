@@ -1,0 +1,17 @@
+.wp-block-carbon-blocks-advanced-avatar {
+
+}
+
+.carbon-shape-picker {
+	> div {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	}
+}
+.carbon-palette-picker {
+	flex: 1;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	cursor: pointer;
+}

@@ -1,7 +1,8 @@
 @mixin badge {
-	color:var(--blue-400);
-	border:1px solid var(--blue-400);
-	background:white;
+	border-color:hsl(var(--crbn-foreground));
+	color:hsl(var(--crbn-foreground));
+	background-color:hsl(var(--crbn-background));
+	border:1px solid;
 	text-transform:uppercase;
 	border-radius:3px;
 	font-size:12px;
@@ -18,19 +19,19 @@
 		border-radius: 50%;
 	}
 	&.major{
-		color:var(--red);
-		border-color:var(--red);
-		background-color: var(--light-red);
+		color: hsl(var(--crbn-destructive));
+		border-color:hsl(var(--crbn-destructive));
+		background-color: hsl(var(--crbn-destructive-foreground));
 		> span {
-			background-color: var(--red);
+			background-color: hsl(var(--crbn-destructive));
 		}
 	}
 	&.minor{
-		color:var(--green);
-		border-color:var(--green);
-		background-color: var(--light-green);
+		color:hsl(var(--crbn-valid));
+		border-color:hsl(var(--crbn-valid));
+		background-color: hsl(var(--crbn-valid-foreground));
 		> span {
-			background-color: var(--green);
+			background-color: hsl(var(--crbn-valid));
 		}
 	}
 	&.patch{
@@ -39,13 +40,13 @@
 		background-color: var(--yellow);
 	}
 	&.is-new{
-		border-color:var(--blue-500);
-		color:var(--blue-400);
-		background-color:var(--blue-50);
+		border-color:hsl(var(--crbn-foreground));
+		color:hsl(var(--crbn-foreground));
+		background-color:hsl(var(--crbn-background));
 	}
 	&.is-coming{
-		border-color:var(--grey);
-		color:var(--grey);
-		background-color: var(--light-grey);
+		border-color:hsl(var(--crbn-muted-foreground));
+		color:hsl(var(--crbn-muted-foreground));
+		background-color: hsl(var(--crbn-muted));
 	}
 }

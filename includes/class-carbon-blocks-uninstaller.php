@@ -20,7 +20,6 @@ if ( ! class_exists( 'Crbn_Blcks_Uninstaller' ) ) :
 	 	 * @return void
 		 */
 		public static function uninstall() {
-			var_dump(get_option( CRBN_BLCKS_NAME . '_options' ));
 			if( !get_option( CRBN_BLCKS_NAME . '_options' ) ) return true;
 			if( !get_option( CRBN_BLCKS_NAME . '_options' )["deleteAllOnRemove"] ) return true;
 

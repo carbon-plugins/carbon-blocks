@@ -7,6 +7,7 @@ import './style.scss';
 import edit from './edit';
 import save from './save';
 import SvgTestimonialSlider from '/src/assets/block-icons/TestimonialSlider';
+import User1 from "/src/assets/images/base64/user-1"
 
 registerBlockType( 'carbon-blocks/testimonial-slider', {
 	icon: SvgTestimonialSlider,
@@ -98,7 +99,7 @@ registerBlockType( 'carbon-blocks/testimonial-slider', {
                 attributes: {
                   type: "image",
                   image: {
-                    url: "https://picsum.photos/id/447/400/300"
+                    url: User1
                   }
                 }
               }

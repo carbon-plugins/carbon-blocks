@@ -1,0 +1,13 @@
+.wp-block-carbon-blocks-signature {
+	display: flex;
+  gap:10px;
+	> section {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: fit-content;
+	}
+	cite {
+    line-height: 1;
+	}
+}

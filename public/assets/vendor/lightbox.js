@@ -1787,56 +1787,56 @@
     addClass(slideContainer, 'lightbox-video-container');
     slideMedia.insertBefore(createHTML('<div class="lightbox-video-wrapper"></div>'), slideMedia.firstChild);
     var videoWrapper = slide.querySelector('.lightbox-video-wrapper');
-    injectAssets(this.settings.plyr.css, 'Plyr');
+    //injectAssets(this.settings.plyr.css, 'Plyr');
     var url = data.href;
     var provider = data === null || data === void 0 ? void 0 : data.videoProvider;
     var customPlaceholder = false;
     slideMedia.style.maxWidth = data.width;
-    injectAssets(this.settings.plyr.js, 'Plyr', function () {
-      if (!provider && url.match(/vimeo\.com\/([0-9]*)/)) {
-        provider = 'vimeo';
-      }
+    // injectAssets(this.settings.plyr.js, 'Plyr', function () {
+    //   if (!provider && url.match(/vimeo\.com\/([0-9]*)/)) {
+    //     provider = 'vimeo';
+    //   }
 
-      if (!provider && (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_]+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_]+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_]+)/))) {
-        provider = 'youtube';
-      }
+    //   if (!provider && (url.match(/(youtube\.com|youtube-nocookie\.com)\/watch\?v=([a-zA-Z0-9\-_]+)/) || url.match(/youtu\.be\/([a-zA-Z0-9\-_]+)/) || url.match(/(youtube\.com|youtube-nocookie\.com)\/embed\/([a-zA-Z0-9\-_]+)/))) {
+    //     provider = 'youtube';
+    //   }
 
-      if (provider === 'local' || !provider) {
-        provider = 'local';
-        var html = '<video id="' + videoID + '" ';
-        html += "style=\"background:#000; max-width: ".concat(data.width, ";\" ");
-        html += 'preload="metadata" ';
-        html += 'x-webkit-airplay="allow" ';
-        html += 'playsinline ';
-        html += 'controls ';
-        html += 'class="lightbox-video-local">';
-        html += "<source src=\"".concat(url, "\">");
-        html += '</video>';
-        customPlaceholder = createHTML(html);
-      }
+    //   if (provider === 'local' || !provider) {
+    //     provider = 'local';
+    //     var html = '<video id="' + videoID + '" ';
+    //     html += "style=\"background:#000; max-width: ".concat(data.width, ";\" ");
+    //     html += 'preload="metadata" ';
+    //     html += 'x-webkit-airplay="allow" ';
+    //     html += 'playsinline ';
+    //     html += 'controls ';
+    //     html += 'class="lightbox-video-local">';
+    //     html += "<source src=\"".concat(url, "\">");
+    //     html += '</video>';
+    //     customPlaceholder = createHTML(html);
+    //   }
 
-      var placeholder = customPlaceholder ? customPlaceholder : createHTML("<div id=\"".concat(videoID, "\" data-plyr-provider=\"").concat(provider, "\" data-plyr-embed-id=\"").concat(url, "\"></div>"));
-      addClass(videoWrapper, "".concat(provider, "-video lightbox-video"));
-      videoWrapper.appendChild(placeholder);
-      videoWrapper.setAttribute('data-id', videoID);
-      videoWrapper.setAttribute('data-index', index);
-      var playerConfig = has(_this.settings.plyr, 'config') ? _this.settings.plyr.config : {};
-      var player = new Plyr('#' + videoID, playerConfig);
-      player.on('ready', function (event) {
-        videoPlayers[videoID] = event.detail.plyr;
+    //   var placeholder = customPlaceholder ? customPlaceholder : createHTML("<div id=\"".concat(videoID, "\" data-plyr-provider=\"").concat(provider, "\" data-plyr-embed-id=\"").concat(url, "\"></div>"));
+    //   addClass(videoWrapper, "".concat(provider, "-video lightbox-video"));
+    //   videoWrapper.appendChild(placeholder);
+    //   videoWrapper.setAttribute('data-id', videoID);
+    //   videoWrapper.setAttribute('data-index', index);
+    //   var playerConfig = has(_this.settings.plyr, 'config') ? _this.settings.plyr.config : {};
+    //   var player = new Plyr('#' + videoID, playerConfig);
+    //   player.on('ready', function (event) {
+    //     videoPlayers[videoID] = event.detail.plyr;
 
-        if (isFunction(callback)) {
-          callback();
-        }
-      });
-      waitUntil(function () {
-        return slide.querySelector('iframe') && slide.querySelector('iframe').dataset.ready == 'true';
-      }, function () {
-        _this.resize(slide);
-      });
-      player.on('enterfullscreen', handleMediaFullScreen);
-      player.on('exitfullscreen', handleMediaFullScreen);
-    });
+    //     if (isFunction(callback)) {
+    //       callback();
+    //     }
+    //   });
+    //   waitUntil(function () {
+    //     return slide.querySelector('iframe') && slide.querySelector('iframe').dataset.ready == 'true';
+    //   }, function () {
+    //     _this.resize(slide);
+    //   });
+    //   player.on('enterfullscreen', handleMediaFullScreen);
+    //   player.on('exitfullscreen', handleMediaFullScreen);
+    // });
   }
 
   function handleMediaFullScreen(event) {
@@ -2435,29 +2435,29 @@
     keyboardNavigation: true,
     closeOnOutsideClick: true,
     plugins: false,
-    plyr: {
-      css: 'https://cdn.plyr.io/3.6.12/plyr.css',
-      js: 'https://cdn.plyr.io/3.6.12/plyr.js',
-      config: {
-        ratio: '16:9',
-        fullscreen: {
-          enabled: true,
-          iosNative: true
-        },
-        youtube: {
-          noCookie: true,
-          rel: 0,
-          showinfo: 0,
-          iv_load_policy: 3
-        },
-        vimeo: {
-          byline: false,
-          portrait: false,
-          title: false,
-          transparent: false
-        }
-      }
-    },
+    // plyr: {
+    //   css: 'https://cdn.plyr.io/3.6.12/plyr.css',
+    //   js: 'https://cdn.plyr.io/3.6.12/plyr.js',
+    //   config: {
+    //     ratio: '16:9',
+    //     fullscreen: {
+    //       enabled: true,
+    //       iosNative: true
+    //     },
+    //     youtube: {
+    //       noCookie: true,
+    //       rel: 0,
+    //       showinfo: 0,
+    //       iv_load_policy: 3
+    //     },
+    //     vimeo: {
+    //       byline: false,
+    //       portrait: false,
+    //       title: false,
+    //       transparent: false
+    //     }
+    //   }
+    // },
     openEffect: 'zoom',
     closeEffect: 'zoom',
     slideEffect: 'slide',
@@ -3406,7 +3406,8 @@
         }
 
         if (video) {
-          var ratio = has(this.settings.plyr.config, 'ratio') ? this.settings.plyr.config.ratio : '';
+          //var ratio = has(this.settings.plyr.config, 'ratio') ? this.settings.plyr.config.ratio : '';
+					var ratio = '';
 
           if (!ratio) {
             var containerWidth = video.clientWidth;

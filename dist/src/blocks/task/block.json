@@ -1,0 +1,136 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/task",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "parent": [
+    "carbon-blocks/tasks"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "gradients": true,
+      "link": false,
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowEditing": true,
+      "allowInheriting": false,
+      "allowSizingOnChildren": false,
+      "allowVerticalAlignment": false,
+      "allowJustification": true,
+      "allowOrientation": false,
+      "default": {
+        "type": "flex",
+        "orientation": "horizontal",
+        "justifyContent": "left",
+        "verticalAlignment": "center",
+        "flexWrap": "wrap"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "textContent": {
+      "type": "string",
+      "default": ""
+    },
+    "activeTask": {
+      "type": "boolean",
+      "default": true
+    },
+    "color": {
+      "type": "string"
+    },
+    "background": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "default": "strikethrough"
+    },
+    "tickColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "tickBackground": {
+      "type": "string",
+      "default": "rgb(14 159 110)"
+    },
+    "disabledColor": {
+      "type": "string",
+      "default": "rgb(107 114 128)"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "spacing": {
+          "blockGap": "10px",
+          "padding": "10px"
+        }
+      }
+    }
+  },
+  "usesContext": [
+    "carbon-blocks/labels"
+  ],
+  "providesContext": {},
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

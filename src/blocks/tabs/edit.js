@@ -215,7 +215,7 @@ export default function Edit( props ) {
 						newTabLabels[active] = tabLabel;
 						setEditTabVisibility( false );
 						setAttributes( {
-							tabLabels: newTabLabels
+							tabLabels: [ ...newTabLabels ]
 						} )
 					} }
 				>

@@ -1,0 +1,11 @@
+.wp-block-carbon-blocks-advanced-avatar {
+	display: flex;
+	width: 100%;
+	img {
+		&[src=""] {
+			content: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+			background: #EBEBEB;
+			border: 1px solid #aaa;
+		}
+	}
+}

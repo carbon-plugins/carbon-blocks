@@ -7,6 +7,14 @@ import './style.scss';
 import edit from './edit';
 import save from './save';
 import SvgMasonry from '/src/assets/block-icons/Masonry';
+import Masonry1 from '/src/assets/images/base64/masonry-1';
+import AdvancedImage from '/src/assets/images/base64/advanced-image';
+import Masonry3 from '/src/assets/images/base64/masonry-3';
+import Masonry4 from '/src/assets/images/base64/masonry-4';
+import Masonry5 from '/src/assets/images/base64/masonry-5';
+import Masonry6 from '/src/assets/images/base64/masonry-6';
+import Masonry7 from '/src/assets/images/base64/masonry-7';
+import Masonry8 from '/src/assets/images/base64/masonry-8';
 
 registerBlockType( 'carbon-blocks/masonry', {
 	icon: SvgMasonry,
@@ -20,30 +28,30 @@ registerBlockType( 'carbon-blocks/masonry', {
 			allowZoom: false,
       images: [
         {
-          url:"https://picsum.photos/id/12/400/300"
+          url: Masonry1
         },
         {
-          url:"https://picsum.photos/id/733/400/300",
+          url: AdvancedImage,
           caption: __("A beautiful sky", "carbon-blocks")
         },
         {
-          url:"https://picsum.photos/id/77/300/500"
+          url: Masonry3
         },
         {
-          url:"https://picsum.photos/id/58/300/500"
+          url: Masonry4
         },
         {
-          url:"https://picsum.photos/id/29/400/300"
+          url: Masonry5
         },
         {
-          url:"https://picsum.photos/id/277/300/400",
+          url: Masonry6,
           caption: __("It's windy !", "carbon-blocks")
         },
         {
-          url:"https://picsum.photos/id/15/400/300"
+          url: Masonry7
         },
         {
-          url:"https://picsum.photos/id/324/400/300"
+          url: Masonry8
         }
       ],
     }

@@ -1,42 +1,41 @@
 @mixin button {
 	cursor: pointer;
-	padding: 5px 10px;
-	border-radius: 7px;
-	border:var(--blue-300) 2px solid;
-	transition: background-color .2s cubic-bezier(0,.7,.3,.99), border-color .2s cubic-bezier(0,.7,.3,.99);
-	background-color: var(--blue-500);
+	font-size: .875rem;
+	line-height: 1.25rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	font-weight: 500;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: calc(var(--crbn-radius) - 2px);
 	white-space: nowrap;
-	font-weight:700;
-	color:white;
-	transform: 0s;
-	font-size: 1rem;
-	&:hover, &:focus {
-		color: white;
-		border-color: var(--blue-300);
-		background-color: var(--blue-600);
-		transition: background-color .2s cubic-bezier(0,.7,.3,.99), border-color .2s cubic-bezier(0,.7,.3,.99);
-		text-decoration: underline;
-	}
+	justify-content: center;
+	align-items: center;
+	height: 2.5rem;
+	display: inline-flex;
 	&:focus-visible {
-		outline: 3px solid var(--blue-300);
+		--tw-ring-offset-width: 2px;
+    --tw-ring-color: hsl(var(--crbn-ring));
+		--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+		outline: 2px solid #0000;
+    outline-offset: 2px;
 	}
 	&.is-light {
-		color: var(--blue-400);
-		background-color: var(--white);
-		&:hover, &:focus {
-			color: var(--blue-500);
-			border-color: var(--blue-500);
-			background-color: var(--light-grey);
-			transition: background-color .2s cubic-bezier(0,.7,.3,.99);
-		}
+		background-color: transparent;
+		color: var(--crbn-foreground);
 	}
 	&.is-outline {
-		border:1px solid var(--blue-500);
-		color:var(--blue-500);
-		background: var(--white);
+		background-color: hsl(var(--crbn-background));
+		border-color:  hsl(var(--crbn-input));
+		color: var(--crbn-foreground);
 		&:hover, &:focus {
-			color: var(--white);
-			background-color: var(--blue-500);
+			color: hsl(var(--crbn-accent-foreground));
+			background-color: hsl(var(--crbn-accent));
+			--tw-ring-offset-color: hsl(var(--crbn-background));
 		}
 	}
 	&.not-available{

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/features",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "__experimentalExposeControlsToChildren": true,
+    "color": {
+      "gradients": true,
+      "link": false,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "columns": {
+      "type": "number",
+      "default": 2
+    },
+    "alignment": {
+      "default": "center",
+      "enum": [
+        "top",
+        "center",
+        "bottom",
+        "justify-stretch"
+      ]
+    },
+    "justification": {
+      "default": "center",
+      "enum": [
+        "left",
+        "center",
+        "right",
+        "space-between"
+      ]
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "spacing": {
+          "blockGap": "10px"
+        }
+      }
+    }
+  },
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,7 +1,7 @@
 // External dependencies
 import DOMPurify from 'dompurify';
-import { heroicons as heroiconLibrary } 				from '@carbon-plugins/icon-libraries';
-import { dashicons as dashiconLibrary } 				from "@carbon-plugins/icon-libraries";
+import heroiconLibrary from '@carbon-plugins/icon-libraries/dist/carbon-blocks/heroicons';
+import dashiconLibrary from "@carbon-plugins/icon-libraries/dist/carbon-blocks/dashicons";
 import { wordpress as wordpressLibrary }  			from './icons/wordpress';
 
 // WordPress dependencies
@@ -483,7 +483,7 @@ export default function Edit(props) {
 													_n( '%1$s result for "%2$s"', '%1$s results for "%2$s"', currentIcons?.length, 'carbon-blocks' ),
 													currentIcons?.length,
 													searchInput,
-													'carbon-icons'
+													'carbon-blocks'
 												)
 												/* translators: %1$s is replaced with the number of results */
 												: sprintf( '%1$s more letters before search', 3 - searchInput.length, 'carbon-blocks' )
@@ -570,7 +570,7 @@ export default function Edit(props) {
 				onRequestClose={ () => closeInserterModal() }
 				isFullScreen
 			>
-				<Button isSecondary onClick={ () => { closeInserterModal(); setModalVisibilty(true) } } type="submit" className='carbon-blocks-inserter-modal__return'>{ __( "Return to icon list", "carbon-icons") }</Button>
+				<Button isSecondary onClick={ () => { closeInserterModal(); setModalVisibilty(true) } } type="submit" className='carbon-blocks-inserter-modal__return'>{ __( "Return to icon list", "carbon-blocks") }</Button>
 				<section className="carbon-blocks-inserter-modal__content">
 					<section className="carbon-blocks-inserter-modal__inserter">
 						<TextareaControl

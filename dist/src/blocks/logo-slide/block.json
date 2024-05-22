@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/logo-slide",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "parent": [
+    "carbon-blocks/logo-slider"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": false
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": false
+    },
+    "logo": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "usesContext": [],
+  "providesContext": {},
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

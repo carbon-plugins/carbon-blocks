@@ -6,7 +6,7 @@ import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 import {
 	InnerBlocks, useInnerBlocksProps,	useBlockProps, InspectorControls,
-	useSetting
+	useSettings
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -29,7 +29,7 @@ export default function Edit( props ) {
 		}
 	});
 
-	const defaultPalette = useSetting( 'color.palette' ) || [];
+	const defaultPalette = useSettings( 'color.palette' ) || [];
 
 	const isParentOfSelectedBlock = useSelect( ( select ) => select( 'core/block-editor' ).hasSelectedInnerBlock( clientId, true ) );
 
@@ -58,6 +58,8 @@ export default function Edit( props ) {
 					label={ __( 'Separator', 'carbon-blocks' ) }
 					onChange={ border => setAttributes({ border }) }
 					value={ border }
+					withSlider
+					enableAlpha
 				/>
 			</PanelBody>
 		</InspectorControls>

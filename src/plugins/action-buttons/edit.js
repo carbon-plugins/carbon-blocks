@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { Fragment } from '@wordpress/element';
-import { trash, group } from '@wordpress/icons';
+import { Trash, Duplicate } from '/src/assets/icons/index'
 import { select, dispatch } from '@wordpress/data';
 import { ToolbarButton, ToolbarGroup } from "@wordpress/components";
 import { BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
@@ -69,7 +69,7 @@ const actionButtons = createHigherOrderComponent( ( BlockEdit ) => {
 						{
 							hasRoom
 								? <ToolbarButton
-									icon={group}
+									icon={ Duplicate }
 									label={__('Duplicate bloc', 'carbon-blocks' )}
 									onClick={() => {
 										const block_ids = select('core/block-editor').getSelectedBlockClientIds();
@@ -84,7 +84,7 @@ const actionButtons = createHigherOrderComponent( ( BlockEdit ) => {
 							onClick={ resetBlock }
 						/> */}
 						<ToolbarButton
-							icon={trash}
+							icon={ Trash }
 							label={__('Delete bloc', 'carbon-blocks' )}
 							className={'trash-icon'}
 							onClick={() => {

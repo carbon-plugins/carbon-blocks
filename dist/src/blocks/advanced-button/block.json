@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/advanced-button",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "parent": [
+    "carbon-blocks/advanced-buttons"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": false,
+    "color": {
+      "gradients": true,
+      "link": false,
+      "background": true,
+      "text": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true,
+        "link": false
+      }
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowEditing": false,
+      "allowInheriting": false,
+      "allowSizingOnChildren": false,
+      "allowVerticalAlignment": false,
+      "allowJustification": false,
+      "allowOrientation": false,
+      "default": {
+        "type": "flex",
+        "flexWrap": "nowrap"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": true,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "post": {
+      "type": "object"
+    },
+    "text": {
+      "type": "string"
+    },
+    "isChild": {
+      "type": "boolean",
+      "default": false
+    },
+    "width": {
+      "type": "string",
+      "default": "fit-content"
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "row"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "border": {
+          "radius": "5px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "12px",
+            "right": "20px",
+            "bottom": "12px",
+            "left": "20px"
+          },
+          "blockGap": "5px"
+        }
+      }
+    }
+  },
+  "usesContext": [],
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

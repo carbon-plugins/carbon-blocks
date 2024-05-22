@@ -9,6 +9,7 @@ import './style.scss';
 import edit from './edit';
 import save from './save';
 import SvgCard from '/src/assets/block-icons/Card';
+import Card1 from '/src/assets/images/base64/card-1';
 
 registerBlockType( 'carbon-blocks/card', {
 	icon: SvgCard,
@@ -23,7 +24,7 @@ registerBlockType( 'carbon-blocks/card', {
         name: 'carbon-blocks/advanced-image',
         attributes: {
           id: 0,
-          url: "https://picsum.photos/id/317/400/300",
+          url: Card1,
           alt: "",
           description: "",
           height: "100%",

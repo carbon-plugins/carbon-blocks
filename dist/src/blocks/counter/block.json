@@ -1,0 +1,152 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/counter",
+  "parent": [
+    "carbon-blocks/counters"
+  ],
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": false,
+    "color": {
+      "gradients": false,
+      "link": false,
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "blockGap": {
+        "__experimentalDefault": ".5rem",
+        "sides": [
+          "vertical"
+        ]
+      },
+      "margin": false,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowInheriting": false,
+      "allowEditing": false,
+      "default": {
+        "type": "flex",
+        "flexWrap": "nowrap"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "prefixe": {
+      "type": "string",
+      "default": ""
+    },
+    "showPrefix": {
+      "type": "boolean",
+      "default": false
+    },
+    "suffixe": {
+      "type": "string",
+      "default": ""
+    },
+    "showSuffix": {
+      "type": "boolean",
+      "default": false
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "showText": {
+      "type": "boolean",
+      "default": true
+    },
+    "number": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "numberColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "suffiixColor": {
+      "type": "string"
+    },
+    "prefixColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "orientation": {
+      "type": "string",
+      "default": "down"
+    },
+    "justification": {
+      "type": "string",
+      "default": "center"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "border": {
+          "radius": "5px"
+        },
+        "spacing": {
+          "padding": "20px",
+          "blockGap": "10px"
+        }
+      }
+    }
+  },
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

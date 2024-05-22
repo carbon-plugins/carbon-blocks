@@ -26,7 +26,6 @@ export default function Edit( props ) {
 
 	const { children, ...innerBlocksProps } = useInnerBlocksProps( blockProps, {
 		allowedBlocks: [ "carbon-blocks/testimonial" ],
-		renderAppender: isSelected || isParentOfSelectedBlock ? InnerBlocks.ButtonBlockAppender : false,
 		template: [
 			[ "carbon-blocks/testimonial" ],
 			[ "carbon-blocks/testimonial" ],

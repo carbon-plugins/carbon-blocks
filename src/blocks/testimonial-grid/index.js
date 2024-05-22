@@ -7,6 +7,7 @@ import './style.scss';
 import edit from './edit';
 import save from './save';
 import SvgTestimonialGrid from '/src/assets/block-icons/TestimonialGrid';
+import User2 from "/src/assets/images/base64/user-2"
 
 registerBlockType( 'carbon-blocks/testimonial-grid', {
 	icon: SvgTestimonialGrid,
@@ -99,7 +100,7 @@ registerBlockType( 'carbon-blocks/testimonial-grid', {
                 attributes: {
                   type: "image",
                   image: {
-                    url: "https://picsum.photos/id/447/400/300"
+                    url: User2
                   }
                 }
               }

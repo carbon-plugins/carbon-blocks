@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/tabs",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "blockGap": false,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": false
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "tabLabels": {
+      "type": "array",
+      "default": [
+        "Tab"
+      ]
+    },
+    "id": {
+      "type": "number",
+      "default": 0
+    },
+    "active": {
+      "type": "number",
+      "default": 0
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "inactiveTextColor": {
+      "type": "string",
+      "default": "#f7f7f7"
+    },
+    "inactiveBackgroundColor": {
+      "type": "string",
+      "default": "#7E7E7E"
+    }
+  },
+  "usesContext": [],
+  "providesContext": {
+    "carbon-blocks/active": "active"
+  },
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css"
+}

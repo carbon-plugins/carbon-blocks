@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/tab",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "parent": [
+    "carbon-blocks/tabs"
+  ],
+  "supports": {
+    "html": false,
+    "multiple": true,
+    "reusable": false,
+    "anchor": true,
+    "customClassName": false,
+    "color": {
+      "gradients": true,
+      "link": false,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": false
+      }
+    },
+    "spacing": {
+      "blockGap": false,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": false
+      }
+    }
+  },
+  "attributes": {
+    "animation": {
+      "default": false,
+      "type": "boolean"
+    },
+    "lock": {
+      "type": "object",
+      "default": {
+        "move": true,
+        "remove": false
+      }
+    },
+    "showActions": {
+      "default": false,
+      "type": "boolean"
+    },
+    "id": {
+      "type": "number"
+    },
+    "active": {
+      "type": "number"
+    }
+  },
+  "usesContext": [
+    "carbon-blocks/active"
+  ],
+  "providesContext": {},
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

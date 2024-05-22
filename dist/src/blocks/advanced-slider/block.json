@@ -1,0 +1,165 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/block-slider",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "gradients": true,
+      "link": false,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true,
+        "blockGap": false
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowInheriting": false,
+      "allowEditing": false,
+      "default": {
+        "type": "flex"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "settings": {
+      "type": "object",
+      "default": {
+        "initialSlide": 0,
+        "slidesPerView": 1,
+        "slidesPerGroup": 1,
+        "spaceBetween": 20,
+        "autoHeight": false,
+        "centeredSlides": false,
+        "loopMode": "",
+        "speed": 300
+      }
+    },
+    "effect": {
+      "type": "object",
+      "default": {
+        "type": "slide"
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "color": "#000000",
+        "background": "rgba(255, 255, 255, .7)"
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "default": {
+        "size": 8,
+        "radius": 10,
+        "enabled": true,
+        "dynamic": true,
+        "type": "bullets",
+        "color": "#000000",
+        "inactiveColor": "#000000",
+        "background": "rgba(255, 255, 255, .7)"
+      }
+    },
+    "scrollbar": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "hide": true
+      }
+    },
+    "autoplay": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "delay": 3000,
+        "pauseOnMouseEnter": true
+      }
+    },
+    "freeMode": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "momentum": true,
+        "sticky": false
+      }
+    },
+    "controls": {
+      "type": "object",
+      "default": {
+        "keyboard": {
+          "enabled": false
+        },
+        "mousewheel": {
+          "enabled": false
+        }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "default": {
+        "firstSlideMessage": "This is the first slide",
+        "lastSlideMessage": "This is the last slide",
+        "prevSlideMessage": "Previous slide",
+        "nextSlideMessage": "Next slide"
+      }
+    }
+  },
+  "usesContext": [],
+  "providesContext": {},
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

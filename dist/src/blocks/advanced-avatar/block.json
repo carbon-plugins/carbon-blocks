@@ -1,0 +1,143 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/advanced-avatar",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "blockGap": false,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": false
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowInheriting": false,
+      "allowEditing": false,
+      "default": {
+        "type": "flex"
+      }
+    },
+    "__experimentalBorder": {
+      "color": false,
+      "radius": true,
+      "style": false,
+      "width": false,
+      "__experimentalDefaultControls": {
+        "radius": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalTextDecoration": false,
+      "__experimentalLetterSpacing": false,
+      "__experimentalDefaultControls": {
+        "fontSize": false,
+        "FontFamily": false
+      }
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "shape",
+        "image",
+        "initials"
+      ],
+      "default": "shape"
+    },
+    "size": {
+      "type": "number",
+      "default": 40
+    },
+    "image": {
+      "type": "object"
+    },
+    "initials": {
+      "type": "object",
+      "default": {
+        "value": "",
+        "color": "#FFFFFF",
+        "background": "#000000"
+      }
+    },
+    "uuid": {
+      "type": "string",
+      "default": ""
+    },
+    "variant": {
+      "type": "string",
+      "default": "beam"
+    },
+    "palette": {
+      "type": "array",
+      "default": []
+    },
+    "focalPoint": {
+      "type": "object",
+      "default": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "showAlignment": {
+      "type": "boolean",
+      "default": true
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "isChild": {
+      "type": "boolean",
+      "default": false
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "width": "0px",
+        "style": "solid",
+        "color": ""
+      }
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "border": {
+          "radius": "100px"
+        }
+      }
+    }
+  },
+  "usesContext": [],
+  "providesContext": {},
+  "textdomain": "carbon-blocks-pro",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css"
+}

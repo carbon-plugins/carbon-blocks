@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "textdomain": "carbon-blocks",
+  "name": "carbon-blocks/accordion",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "keywords": [
+    "message"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "color": {
+      "background": false,
+      "text": false,
+      "gradients": false
+    },
+    "multiple": true,
+    "reusable": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "blockGap": false,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true
+      }
+    },
+    "typography": {
+      "fontSize": false,
+      "lineHeight": false
+    }
+  },
+  "attributes": {
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    },
+    "separatorColor": {
+      "type": "string",
+      "default": "black"
+    },
+    "name": {
+      "type": "string",
+      "default": ""
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "color": "black",
+        "style": "solid",
+        "width": "1px"
+      }
+    }
+  },
+  "usesContext": [],
+  "providesContext": {
+    "carbon-blocks/name": "name"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

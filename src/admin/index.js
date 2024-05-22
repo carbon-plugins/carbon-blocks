@@ -42,8 +42,8 @@ function Router() {
 			driverObj.destroy();
 		},
 		steps: [
-			{ element: '#carbon-blocks nav li:first-of-type a', popover: { title: __( 'Your dashboard', 'carbon-blocks' ), description: __( 'You will find every setting and useful links on this page.', 'carbon-blocks' ), side: "right", align: 'end' } },
-			{ element: '#carbon-blocks nav li:last-of-type a', popover: { title: __( 'License settings', 'carbon-blocks' ), description: __( 'Here, you will be able to manage your license.', 'carbon-blocks' ), side: "right", align: 'end' } },
+			{ element: '#carbon-blocks #Dashboard', popover: { title: __( 'Your dashboard', 'carbon-blocks' ), description: __( 'You will find every setting and useful links on this page.', 'carbon-blocks' ), side: "right", align: 'end' } },
+			{ element: '#carbon-blocks #License', popover: { title: __( 'License settings', 'carbon-blocks' ), description: __( 'Here, you will be able to manage your license.', 'carbon-blocks' ), side: "right", align: 'end' } },
 			{ element: 'nav > section > button:first-of-type', popover: { title: __( 'Dark mode' ), description: __( 'Toggle the light/dark theme and choose the colors that suit you best.', 'carbon-blocks' ), side: "bottom", align: 'end' } },
 			{ element: '#carbon-blocks nav >section button:last-of-type', popover: { title: __( 'Save your changes', 'carbon-blocks' ), description: __( 'Don\'t forget to save data after every change on this page !', 'carbon-blocks' ), side: "bottom", align: 'end' } },
 			{ popover: { title: __( "Congrats !", 'carbon-blocks' ), description: __( "You are now ready to get started with Carbon Blocks, have fun !", 'carbon-blocks' ) } }

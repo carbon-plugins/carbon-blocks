@@ -146,14 +146,6 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 														label="Fade in"
 														value="fade"
 													/>
-													<ToggleGroupControlOption
-														label="Zoom in"
-														value="zoom-in"
-													/>
-													<ToggleGroupControlOption
-														label="Zoom out"
-														value="zoom-out"
-													/>
 												</ToggleGroupControl>
 												<ToggleGroupControl
 													isBlock
@@ -165,42 +157,6 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 													<ToggleGroupControlOption
 														label="Up"
 														value="slide-up"
-													/>
-													<ToggleGroupControlOption
-														label="Down"
-														value="slide-down"
-													/>
-													<ToggleGroupControlOption
-														label="Left"
-														value="slide-left"
-													/>
-													<ToggleGroupControlOption
-														label="Right"
-														value="slide-right"
-													/>
-												</ToggleGroupControl>
-												<ToggleGroupControl
-													isBlock
-													label="Fliping animation"
-													value={ animation.type }
-													onChange={ type => setAttributes( { animation: { ...animation, type } } ) }
-													__nextHasNoMarginBottom
-												>
-													<ToggleGroupControlOption
-														label="Up"
-														value="flip-up"
-													/>
-													<ToggleGroupControlOption
-														label="Down"
-														value="flip-down"
-													/>
-													<ToggleGroupControlOption
-														label="Left"
-														value="flip-left"
-													/>
-													<ToggleGroupControlOption
-														label="Right"
-														value="flip-right"
 													/>
 												</ToggleGroupControl>
 											</PanelBody>
@@ -229,9 +185,9 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 													step={ 100 }
 													onChange={ duration => setAttributes( { animation: { ...animation, duration } } ) }
 												/>
-												<Button __next40pxDefaultSize isDestructive style={{ display:"block", textAlign: "center", width: "100%" }} onClick={ reset }>
+												{/* <Button __next40pxDefaultSize isDestructive style={{ display:"block", textAlign: "center", width: "100%" }} onClick={ reset }>
 													{ __( 'Reset timings to default', 'carbon-blocks' ) }
-												</Button>
+												</Button> */}
 											</PanelBody>
 											case 'easing': return <PanelBody>
 												<BaseControl

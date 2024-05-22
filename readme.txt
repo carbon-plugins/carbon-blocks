@@ -1,34 +1,83 @@
-=== Powerful Block Library - Carbon Blocks ===
+===  - Carbon Blocks ===
 Contributors: mateocarbon, vanessacarbon, carbonplugins
-Tags: gutenberg, slider, tabs, accordion, cards
+Tags: gutenberg, blocks, sliders, avatar, tabs
 Requires at least: 5.9
 Tested up to: 6.5.2
-Requires PHP: 7.0
+Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Easily add icons from multiple libraries tanks to a Gutenberg optimized block
+Carbon Blocks adds new powerful blocks for the Wordpress Gutenberg editor
 
 == Description ==
-[Premium](https://carbon-plugins.com/plugins/carbon-icons/) | [Docs](https://docs.carbon-plugins.com/carbon-icons/) | [Support](https://carbon-plugins.com/support/) | [Contact](https://carbon-plugins.com/contact/)
+[Premium](https://carbon-plugins.com/plugins/carbon-blocks/) | [Docs](https://docs.carbon-plugins.com/carbon-blocks/) | [Support](https://carbon-plugins.com/support/) | [Contact](https://carbon-plugins.com/contact/)
 
-Carbon Blocks is
+Carbon Blocks is the ultimate collection of Gutenberg blocks, designed to elevate your WordPress website. Seamlessly integrated into the Gutenberg editor, Carbon Blocks empowers you to craft stunning web pages, with easy customization, animatons, and much more/
 
 == Included features ==
 
-= A =
+= Access to 23 new Gutenberg Blocks =
+Discover a **diverse range of powerful blocks** to suit every need, including :
+
+- Accordion
+- Advanced Buttons
+- Advanced avatar
+- Advanced Image
+- Badges
+- Cards
+- Counters
+- Features
+- Icons
+- Image Slider
+- Masonry
+- Message
+- Signature
+- Tabs
+- Tasks
+- Testimonial
+- Testimonial Grid
+- Testimonial Slider
+- And many more to come !
+
+= Advanced Styling Options =
+Each block is designed to seamlessly integrate within the Gutenberg editor and is fully customizable, including options for background, colors, padding, and more. This allows you to tailor them to effortlessly align with your website's design.
+
+= Block Animations =
+Add a touch of flair to your website with built-in block animations. Capture your audience's attention with eye-catching, all easily customizable to suit your unique style (delay, duration, ease).
 
 == Carbon Blocks Pro ==
-Upgrade to **[Carbon Blocks Pro](https://carbon-plugins.com/plugins/carbon-icons/)** for advanced features :
+Upgrade to **[Carbon Blocks Pro](https://carbon-plugins.com/plugins/carbon-blocks/)** and get access to exclusive features :
 
-= B =
+= New premium blocks =
+Get your website to a new level with our premium Gutenberg Blocks ! Upgrade today to get your hands on all our powerful premium blocks, including :
+
+- FAQ (seo optimized)
+- Block Slider,
+- Taxonomy Posts
+- Taxonomy Slider
+- Advanced Pricing
+- Logo slider
+- And more to come
+
+= Improved block animations =
+Get new animations and settings to elevate even more your website's visual appeal
+
+= Unlock text animations =
+From letters to words, transform your text into captivating visual elements with our exclusive text animations.
+
+= Access to 4 premium icon libraries =
+Get access to multiple new libraries and thousands new icons:
+- **Advanced icons** (8800+)
+- **Animated icons** (400+)
+- **Flag icons** (200+)
+- **Logo icons** (1700+).
 
 = Premium support =
 Benefit from dedicated **premium support** to promptly assist you with any queries or concerns you may have.
 
 = Regular updates =
-Stay up-to-date with **regular updates** that ensure your icon library remains fresh and bug-free, providing **continuous improvement and enhancement**.
+Stay up-to-date with **regular updates** that ensure your block library remains fresh and bug-free, providing **continuous improvement, enhancement, new blocks and features**.
 
 = Flexible licensing options =
 Select between a convenient **yearlong subscription or a lifetime license**, giving you the flexibility to choose the plan that best suits your needs and preferences.
@@ -44,13 +93,14 @@ For more information or help :
 * [Github Repository](https://github.com/carbon-plugins/carbon-blocks/)
 
 == Roadmap ==
-
--  `[IN PROGRESS]`
--  `[NOT STARTED]`
+- Add new blocks `[IN PROGRESS]`
+- Improve currrent blocks `[IN PROGRESS]`
+- Full translation to French (fr_FR) `[IN PROGRESS]`
+- Translation to Spanish (es_ES) `[NOT STARTED]`
+- Translation to German (de_DE) `[NOT STARTED]`
 
 == Included languages ==
 - English (en_US)
-- French (fr_FR) (not fully translated)
 
 == Installation ==
 
@@ -59,14 +109,14 @@ Installation is free, quick, and easy.
 = From your WordPress dashboard =
 
 Navigate to the 'Plugins' section and click 'Add New'.
-Search for 'Carbon Blocks Plugin'.
+Search for 'Carbon Blocks'.
 Click 'Install Now' and then 'Activate'.
 
 = Manual Installation from folder =
 
 Download the plugin ZIP file.
 Unzip the file.
-Upload the 'carbon-icons' folder to the '/wp-content/plugins/' directory.
+Upload the 'carbon-blocks' folder to the '/wp-content/plugins/' directory.
 Activate the plugin from the 'Plugins' section in your WordPress dashboard.
 
 = Manual Installation from your WordPress dashboard =
@@ -78,72 +128,10 @@ Activate the plugin from the 'Plugins' section in your WordPress dashboard.
 
 = Activate and Use =
 
-After activation, you'll find the Carbon Blocks block in the Gutenberg editor.
-Choose an icon from the library, customize it, or upload your SVG.
-To access Carbon Blocks Pro features,  [check out this page](https://carbon-plugins.com/plugins/carbon-icons/).
-
-== Frequently Asked Questions ==
-
-= What is the Carbon Blocks WordPress plugin ? =
-
-The Carbon Blocks WordPress plugin is a powerful tool that adds a Gutenberg block to your website, enabling you to select and display icons from multiple icon libraries.
-
-= Which icon libraries are available in the plugin ? =
-
-As you read this, the plugin offers three free icon libraries: Classic Icons, Dashicons, and WordPress Icons. Additionally, there are four premium icon libraries: Premium Icons, Animated Icons, Flag Icons, and Logo Icons.
-
-= Is there a free version of the plugin available ? =
-
-Yes, there is a free version of the Carbon Blocks plugin that offers the three basic icon libraries: Classic Icons, Dashicons, and WordPress Icons. It allows you to add icons to your website without any cost.
-
-= How can I access the premium version of the plugin ? =
-
-To access the premium version of Carbon Blocks, you can purchase a subscription. There are two options available: a yearly subscription for $19 (VAT excluded) or a lifetime subscription for $89 (VAT excluded). The premium version provides access to all functionalities, a premium support and all updates for one website.
-
-= Are updates included in the premium version ? =
-
-Yes, the premium version of Carbon Blocks includes all future updates, ensuring that you have access to the latest features, enhancements, and compatibility improvements for your website.
-
-= Can I use the premium version on multiple websites ? =
-
-The premium version of Carbon Blocks provides support and updates for one website. If you require the premium features for additional websites, separate licenses will need to be purchased for each site. Note that you can get a discount by buying multiple licenses at the same time.
-
-= What customization options are available for the icons ? =
-
-The plugin allows you to customize the icons in various ways. You can adjust the size, color, position, and background of the icons to match your website's design and requirements. Additionally, you can upload your own SVG icons to add a personal touch to your website.
-
-= Can I upload my own SVG icons using this plugin ? =
-
-Yes, you can ! Both the free and premium versions of Carbon Blocks allow you to upload your own SVG icons, giving you even more flexibility and customization options.
-
-= How can I get support for the plugin ? =
-
-If you have purchased the premium version, you will receive premium support, which includes assistance with any issues or questions you may have regarding the plugin. You can [reach out to our support team](https://carbon-plugins.com/support/) or [submit a ticket](https://shop.carbon-plugins.com/my-account/support/) from your Carbon Plugins account. If you don't have a premium license, you can look out for [community help](https://wordpress.org/support/plugin/carbon-icons/) or reach out to us through the [contact page](https://carbon-plugins.com/contact/).
-
-== Screenshots ==
-
-1. With Carbon Blocks, customization is a breeze. Tailor the icons to your precise requirements by adjusting their size, color, position, and background.
-2. Carbon Blocks supports custom icons, allowing you to infuse your website with a personal touch.
-3. With over 12000 icons (in the premium version), Carbon Blocks has every icon you need.
-4. Carbon Blocks offers an impressive selection of icon libraries to suit your unique design needs.
-5. Carbon Blocks was built for the Gutenberg editor, allowing you to add icons to your posts and pages with just a few clicks.
-6. Find any icon icon with ease thanks to a search input that lets you swiftly find anything you need.
-7. Multiple icon libraries, with every icon you need.
-8. Add your own, custom SVG
-9. Multiple convenient settings
-10. Extended customisation for unique icons
-11. Carbon Blocks dashboard in light mode
-12. Carbon Blocks dashboard in dark mode
+After activation, you'll find the Carbon Blocks blocks in the Gutenberg editor.
+To access Carbon Blocks Pro features, [check out this page](https://carbon-plugins.com/plugins/carbon-blcoks/).
 
 == Changelog ==
-
-= 1.1.0 =
-*
-
-= 1.0.1 =
-* Added hundreds of keywords to dashicons
-* Improved Dashicon search
-* Improved code quality
 
 = 1.0.0 =
 * Initial release of Carbon Blocks
@@ -153,4 +141,4 @@ If you have purchased the premium version, you will receive premium support, whi
 = 1.0.0 =
 Get started with Carbon Blocks !
 
-[View the full changelog](https://carbon-plugins.com/release-notes/?plugin=carbon-icons)
+[View the full changelog](https://carbon-plugins.com/release-notes/?plugin=carbon-blocks)

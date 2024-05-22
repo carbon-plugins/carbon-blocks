@@ -1,0 +1,119 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "carbon-blocks/icons",
+  "version": "1.0.0",
+  "category": "carbon-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true,
+    "multiple": true,
+    "reusable": true,
+    "align": false,
+    "color": {
+      "gradients": true,
+      "link": false,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "blockGap": false,
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true,
+        "blockGap": false
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    }
+  },
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "flex-start"
+    },
+    "icon": {
+      "type": "object",
+      "default": {
+        "category": "",
+        "keywords": [],
+        "name": "",
+        "slug": "",
+        "svg": "",
+        "isCustom": false
+      }
+    },
+    "widthType": {
+      "type": "string",
+      "default": "custom"
+    },
+    "strokeWidth": {
+      "type": "string",
+      "default": 1
+    },
+    "size": {
+      "type": "number",
+      "default": 40
+    },
+    "unit": {
+      "type": "string",
+      "default": "px"
+    },
+    "rotation": {
+      "type": "number",
+      "default": 0
+    },
+    "isFlippedVertically": {
+      "type": "boolean",
+      "default": false
+    },
+    "isFlippedHorizontally": {
+      "type": "boolean",
+      "default": false
+    },
+    "post": {
+      "type": "object",
+      "default": {
+        "url": ""
+      }
+    },
+    "text": {
+      "type": "string"
+    },
+    "iconLibrary": {
+      "type": "string",
+      "default": "heroicons"
+    },
+    "showAlignment": {
+      "type": "boolean",
+      "default": true
+    },
+    "isChild": {
+      "type": "boolean",
+      "default": false
+    },
+    "showActions": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "carbon-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

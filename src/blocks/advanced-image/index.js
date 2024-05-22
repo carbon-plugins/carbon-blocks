@@ -9,6 +9,7 @@ import './style.scss';
 import edit from './edit';
 import save from './save';
 import SvgAdvancedImage from '/src/assets/block-icons/AdvancedImage';
+import AdvancedImage from '/src/assets/images/base64/advanced-image';
 
 registerBlockType( 'carbon-blocks/advanced-image', {
 	icon: SvgAdvancedImage,
@@ -17,9 +18,9 @@ registerBlockType( 'carbon-blocks/advanced-image', {
 	example: {
     attributes: {
       id: 0,
-      url: "https://picsum.photos/id/733/400/300",
-      alt: "",
-      caption: __("A beautiful sky with clouds", "carbon-blocks"),
+      url: AdvancedImage,
+      alt: __( "A beautiful sky with clouds", "carbon-blocks" ),
+      caption: __( "A beautiful sky with clouds", "carbon-blocks" ),
       description: "",
       height: "100%",
       width: "100%",
