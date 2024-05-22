@@ -83,7 +83,7 @@ export default function License() {
 									</div>
 									<section className='flex flex-wrap gap-4 w-full'>
 										<Button asChild>
-											<a href='https://shop.carbon-plugins.com/?add-to-cart=292&quantity=1' target="_blank" className="flex-1 hover:text-primary-foreground focus:text-primary-foreground">
+											<a href='https://carbon-plugins.com/shop/?add-to-cart=292&quantity=1' target="_blank" className="flex-1 hover:text-primary-foreground focus:text-primary-foreground">
 												<ShoppingCart className="mr-2 h-4 w-4" />
 												{ __( 'Buy now', 'carbon-blocks' ) }
 											</a>
@@ -153,7 +153,7 @@ export default function License() {
 									</div>
 									<section className='flex flex-wrap gap-4 w-full'>
 										<Button asChild>
-											<a href='https://shop.carbon-plugins.com/?add-to-cart=291&quantity=1' target="_blank" className="flex-1 hover:text-primary-foreground focus:text-primary-foreground">
+											<a href='https://carbon-plugins.com/shop/?add-to-cart=291&quantity=1' target="_blank" className="flex-1 hover:text-primary-foreground focus:text-primary-foreground">
 												<ShoppingCart className="mr-2 h-4 w-4" />
 												{ __( 'Buy now', 'carbon-blocks' ) }
 											</a>

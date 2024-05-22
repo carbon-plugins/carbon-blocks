@@ -24,30 +24,34 @@ body.toplevel_page_carbon-plugins {
     line-height: 2.25rem;
     font-weight: 800;
 	}
-	> div {
+	> main {
 		display:flex;
-		flex-direction: column;
 		gap:20px;
+		margin-top: 20px;
+		flex-wrap: nowrap;
+		flex-direction: column;
 		@include md {
 			flex-direction: row;
 		}
 	}
-	> div > section {
-    width:100%;
-		display: flex;
-		flex-direction: column;
-		gap:20px;
-		flex: 1;
-		> section {
-      display: flex;
-      padding: 2rem;
+	> main {
+		& > section {
+			display:flex;
+			gap:20px;
+			flex-wrap: nowrap;
 			flex-direction: column;
-      border-radius: 0.5rem;
-      border:1px solid rgb(229 231 235);
-      height: fit-content;
-      background-color: #ffffff;
-      gap:20px;
-      box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;
+			width: 50%;
+			& > section {
+				display: flex;
+				padding: 2rem;
+				flex-direction: column;
+				border-radius: var(--crbn-radius);
+				border: 1px solid hsl(var(--crbn-border));
+				background: hsl(var(--crbn-card));
+				color: hsl(var(--crbn-foreground));
+				height: fit-content;
+				gap:20px;
+			}
 		}
 		h2{
 			width:100%;
@@ -88,7 +92,7 @@ body.toplevel_page_carbon-plugins {
 			width: 100%;
 			flex: 1;
 			&:has(+ article) {
-				border-bottom: 1px solid lightgray;
+				border-bottom: 1px solid hsl(var(--crbn-border));
 				padding-bottom: 20px;
 			}
 			> p{
@@ -111,80 +115,12 @@ body.toplevel_page_carbon-plugins {
 				}
 			}
 		}
+		ul {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
 	}
-  &__rss{
-    > section{
-      > section{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap:40px;
-        @include xl{
-          position:relative;
-          &::after{
-            position: absolute;
-            content:'';
-            height:100%;
-            width:1px;
-            background:var(--light-grey);
-            top:0;
-            left:50%;
-          }
-        }
-      }
-    }
-		a{
-			text-decoration: none;
-			&:hover{
-				h3, article > p:last-of-type {
-					text-decoration: underline;
-				}
-			}
-			@include xl{
-				width:calc(50% - 20px);
-			}
-		}
-		article{
-			display:flex;
-			flex-direction: column;
-			gap:10px;
-			p {
-				font-size: 1rem;
-				margin: 0 0 10px 0;
-			}
-			h3 {
-				margin:0;
-				font-size: 1.25rem;
-				line-height: 1.35;
-			}
-			> p:first-of-type{
-				color:#868686;
-			}
-			> p:last-of-type{
-				color:var(--blue-500);
-				transition: .2s;
-				display: flex;
-				gap: 10px;
-				margin: 0;
-				justify-content: flex-end;
-			}
-		}
-		header{
-			display:flex;
-			align-items: center;
-			justify-content: space-between;
-			> span.badge{
-				position:initial;
-				transform: none;
-				margin-bottom:0;
-			}
-			> p{
-				font-size:14px;
-				color:#868686;
-				margin: 0;
-			}
-		}
-  }
 	.button {
 		@include button;
 	}

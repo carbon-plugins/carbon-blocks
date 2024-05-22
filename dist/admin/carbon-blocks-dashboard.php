@@ -1,4 +1,9 @@
 <?php
+
+	if ( ! defined( 'ABSPATH' ) ) {
+		exit; // Exit if accessed directly.
+	}
+
 	$our_plugins = [
 		"Carbon Icons" => [
 			"Name" => "Carbon Icons",

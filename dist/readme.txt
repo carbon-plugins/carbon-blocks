@@ -3,12 +3,12 @@ Contributors: mateocarbon, vanessacarbon, carbonplugins
 Tags: gutenberg, blocks, sliders, avatar, tabs
 Requires at least: 5.9
 Tested up to: 6.5.2
-Requires PHP: 7.0
+Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Carbon Blocks is a complete library adding powerful blocks for the Wordpress Gutenberg editor
+Carbon Blocks adds new powerful blocks for the Wordpress Gutenberg editor
 
 == Description ==
 [Premium](https://carbon-plugins.com/plugins/carbon-blocks/) | [Docs](https://docs.carbon-plugins.com/carbon-blocks/) | [Support](https://carbon-plugins.com/support/) | [Contact](https://carbon-plugins.com/contact/)
@@ -50,7 +50,6 @@ Add a touch of flair to your website with built-in block animations. Capture you
 Upgrade to **[Carbon Blocks Pro](https://carbon-plugins.com/plugins/carbon-blocks/)** and get access to exclusive features :
 
 = New premium blocks =
-
 Get your website to a new level with our premium Gutenberg Blocks ! Upgrade today to get your hands on all our powerful premium blocks, including :
 
 - FAQ (seo optimized)
@@ -94,7 +93,8 @@ For more information or help :
 * [Github Repository](https://github.com/carbon-plugins/carbon-blocks/)
 
 == Roadmap ==
--
+- Add new blocks `[IN PROGRESS]`
+- Improve currrent blocks `[IN PROGRESS]`
 - Full translation to French (fr_FR) `[IN PROGRESS]`
 - Translation to Spanish (es_ES) `[NOT STARTED]`
 - Translation to German (de_DE) `[NOT STARTED]`
