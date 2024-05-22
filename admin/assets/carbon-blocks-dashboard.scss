@@ -1,5 +1,5 @@
+@import '../../src/admin/styles/theme.scss';
 @import './mixins';
-@import './colors';
 @import './button';
 @import './badge';
 
@@ -126,5 +126,25 @@ body.toplevel_page_carbon-plugins {
 	}
 	.badge {
 		@include badge;
+	}
+}
+
+html {
+	@include theme-light;
+}
+
+html.dark {
+	@include theme-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		@include theme-dark;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		@include theme-light;
 	}
 }
