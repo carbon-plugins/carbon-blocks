@@ -115,7 +115,6 @@ if ( ! class_exists( 'Crbn_Blcks_Register' ) ) :
 		public function add_data_animation( $block_content, $block ) {
 
 			if ( str_starts_with($block['blockName'], 'core/') || str_starts_with($block['blockName'], 'carbon-blocks/') ) {
-				var_dump(key_exists("animation", $block["attrs"]));
 				if(key_exists("animation", $block["attrs"])) {
 					if($block["attrs"]["animation"]["isActive"]) {
 						$anim 			= $block["attrs"]["animation"]["type"];
