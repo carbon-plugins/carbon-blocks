@@ -67,9 +67,9 @@
 			}
 		?>
 	</h1>
-	<div>
-		<section class="carbon-plugins__plugins">
-			<section class="carbon-plugins__installed">
+	<main>
+		<section>
+			<section>
 				<h2><?php echo esc_html( __( "Currently installed plugins", "carbon-blocks" ) ); ?></h2>
 				<?php
 					$plugins 					= get_plugins();
@@ -129,117 +129,66 @@
 					<?php endforeach;
 				?>
 			</section>
-			<section class="carbon-plugins__others">
+		</section>
+		<section>
+			<section>
 				<h2><?php echo esc_html( __("Our other plugins", "carbon-blocks") ); ?></h2>
-					<?php
-						$installed_plugin_names 		= array_column($plugins, 'Name');
-						$cbn_icns_pro_installed = in_array('Carbon Icons Pro', $installed_plugin_names);
-						$missing_plugins 						= array_diff_key($our_plugins, array_flip($installed_plugin_names));
+				<?php
+					$installed_plugin_names 		= array_column($plugins, 'Name');
+					$cbn_icns_pro_installed = in_array('Carbon Icons Pro', $installed_plugin_names);
+					$missing_plugins 						= array_diff_key($our_plugins, array_flip($installed_plugin_names));
 
-						if ($cbn_icns_pro_installed && isset($missing_plugins['Carbon Icons'])) :
-							unset($missing_plugins['Carbon Icons']);
-						endif;
+					if ($cbn_icns_pro_installed && isset($missing_plugins['Carbon Icons'])) :
+						unset($missing_plugins['Carbon Icons']);
+					endif;
 
-						if (!empty($missing_plugins)) :
-							foreach ($missing_plugins as $plugin_name => $plugin_data) :
-								$isNew = $plugin_data["isNew"];
-								$isComing = $plugin_data["isComing"]; ?>
-								<article class="<?php echo $isNew ? esc_html( "is-new" ) : ( $isComing ? esc_html( "is-coming" ) : esc_html( "" ) ); ?>">
-									<header>
-										<h3><?php echo esc_html( $plugin_name ); ?></h3>
-										<?php if($isNew) : ?>
-										<span class="badge is-new"><?php echo esc_html( __( "New", "carbon-blocks" ) ); ?></span>
-										<?php endif; ?>
-										<?php if($isComing) : ?>
-											<span class="badge is-coming"><?php echo esc_html( __( "Coming soon", "carbon-blocks" ) ); ?></span>
-										<?php endif; ?>
-									</header>
-									<p><?php echo esc_html( $plugin_data["Description"] ); ?></p>
-									<?php if(!$isComing) : ?>
-										<section>
-											<a href="<?php echo esc_html( $plugin_data["GetStarted"] ); ?>" class="button">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-												</svg>
-												<?php echo esc_html( __( "Get started", "carbon-blocks" ) ); ?>
-											</a>
-											<a href="<?php echo esc_html( $plugin_data["LearnMore"] ); ?>" class="button is-outline">
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-													<path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-												</svg>
-												<?php echo esc_html( __( "Learn more", "carbon-blocks" ) ); ?>
-											</a>
-										</section>
+					if (!empty($missing_plugins)) :
+						foreach ($missing_plugins as $plugin_name => $plugin_data) :
+							$isNew = $plugin_data["isNew"];
+							$isComing = $plugin_data["isComing"]; ?>
+							<article class="<?php echo $isNew ? esc_html( "is-new" ) : ( $isComing ? esc_html( "is-coming" ) : esc_html( "" ) ); ?>">
+								<header>
+									<h3><?php echo esc_html( $plugin_name ); ?></h3>
+									<?php if($isNew) : ?>
+									<span class="badge is-new"><?php echo esc_html( __( "New", "carbon-blocks" ) ); ?></span>
 									<?php endif; ?>
-								</article>
-							<?php endforeach;
-						else :
-							echo '<p>' .esc_html( __("All plugins are installed ! Thank you for your loyalty :)", "carbon-blocks") ) . '</p>';
-						endif;
-					?>
+									<?php if($isComing) : ?>
+										<span class="badge is-coming"><?php echo esc_html( __( "Coming soon", "carbon-blocks" ) ); ?></span>
+									<?php endif; ?>
+								</header>
+								<p><?php echo esc_html( $plugin_data["Description"] ); ?></p>
+								<?php if(!$isComing) : ?>
+									<section>
+										<a href="<?php echo esc_html( $plugin_data["GetStarted"] ); ?>" class="button">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+											</svg>
+											<?php echo esc_html( __( "Get started", "carbon-blocks" ) ); ?>
+										</a>
+										<a href="<?php echo esc_html( $plugin_data["LearnMore"] ); ?>" class="button is-outline">
+											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+											</svg>
+											<?php echo esc_html( __( "Learn more", "carbon-blocks" ) ); ?>
+										</a>
+									</section>
+								<?php endif; ?>
+							</article>
+						<?php endforeach;
+					else :
+						echo '<p>' .esc_html( __("All plugins are installed ! Thank you for your loyalty :)", "carbon-blocks") ) . '</p>';
+					endif;
+				?>
+			</section>
+			<section>
+				<h2><?php echo esc_html( __("Useful links", "carbon-blocks") ); ?></h2>
+				<ul>
+					<li><a href="https://carbon-plugins.com/" class="button is-outline"><?php echo esc_html( __("Carbon Plugins Website", "carbon-blocks") ); ?></a></li>
+					<li><a href="https://carbon-plugins.com/shop/" class="button is-outline"><?php echo esc_html( __("Carbon Plugins Shop", "carbon-blocks") ); ?></a></li>
+					<li><a href="https://docs.carbon-plugins.com/" class="button is-outline"><?php echo esc_html( __("Carbon Plugins Documentation", "carbon-blocks") ); ?></a></li>
+					<li><a href="https://carbon-plugins.com/support/" class="button is-outline"><?php echo esc_html( __("Carbon Plugins Support", "carbon-blocks") ); ?></a></li>
+				</ul>
 			</section>
 		</section>
-		<?php if (function_exists('simplexml_load_file')) : ?>
-			<section class="carbon-plugins__rss">
-				<section class="carbon-plugins__releases">
-					<h2><?php echo esc_html( __( "Latest releases", "carbon-blocks" ) ); ?></h2>
-					<section>
-						<?php
-							$rss_feed_url 		= 'https://carbon-plugins.com/releases.xml';
-							$xml 							= simplexml_load_file($rss_feed_url);
-							if ($xml) :
-								foreach ($xml->channel->item as $item) :
-									?> <a href="<?php echo esc_html( $item->link ); ?>">
-										<article>
-											<header>
-												<span class="badge minor"><?php echo esc_html( $item->version ); ?></span>
-												<p><?php echo esc_html( date('d/m/Y', strtotime($item->pubDate)) ); ?></p>
-											</header>
-											<h3><?php echo esc_html( $item->title ); ?></h3>
-											<p><?php echo esc_html( $item->description ); ?></p>
-											<p>
-												<?php echo esc_html( __("Read more", "carbon-blocks") ); ?>
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
-											</p>
-										</article>
-									</a>
-								<?php endforeach;
-							else :
-								echo esc_html( __("Cannot read RSS.", "carbon-blocks") );
-							endif;
-						?>
-					</section>
-				</section>
-				<section class="carbon-plugins__news">
-					<h2><?php echo esc_html( __("News from our blog", "carbon-blocks") ); ?></h2>
-					<section>
-						<?php
-							$rss_feed_url 		= 'https://carbon-plugins.com/news.xml';
-							$xml 							= simplexml_load_file($rss_feed_url);
-							if ($xml) :
-								foreach ($xml->channel->item as $item) :
-									?> <a href="<?php echo esc_html( $item->link ); ?>">
-										<article>
-											<header>
-												<span class="badge is-new"><?php echo esc_html( $item->category ); ?></span>
-												<p><?php echo esc_html( date('d/m/Y', strtotime($item->pubDate)) ); ?></p>
-											</header>
-											<h3><?php echo esc_html( $item->title ); ?></h3>
-											<p><?php echo esc_html( $item->description ); ?></p>
-											<p>
-												<?php echo esc_html( __("Read more", "carbon-blocks") ); ?>
-												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
-											</p>
-										</article>
-									</a>
-								<?php endforeach;
-									else :
-										echo esc_html( __("Cannot read RSS.", "carbon-blocks") );
-									endif;
-							?>
-					</section>
-				</section>
-			</section>
-		<?php endif; ?>
-	</div>
+	</main>
 </section>
