@@ -1,0 +1,334 @@
+$screen-xs-min: 320px;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1440px;
+
+@mixin xs {
+  @media screen and (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+@mixin xs-landscape {
+  @media screen and (min-width: #{$screen-xs-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin sm {
+   @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+   }
+}
+@mixin sm-landscape {
+  @media screen and (min-width: #{$screen-sm-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin md {
+   @media screen and (min-width: #{$screen-md-min}) {
+    @content;
+   }
+}
+@mixin md-landscape {
+  @media screen and (min-width: #{$screen-sm-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin lg {
+   @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+   }
+}
+@mixin lg-landscape {
+  @media screen and (min-width: #{$screen-sm-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin xl {
+   @media screen and (min-width: #{$screen-xl-min}) {
+    @content;
+   }
+}
+@mixin xxl {
+  @media screen and (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin touch {
+  @media screen and (pointer:coarse), screen and (-moz-touch-enabled) {
+    @content;
+  }
+}
+@mixin touch-md {
+  @media screen and (pointer:coarse), screen and (-moz-touch-enabled), (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin touch-lg {
+  @media screen and (pointer:coarse), screen and (-moz-touch-enabled), (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin touch-xl {
+  @media screen and (pointer:coarse), screen and (-moz-touch-enabled), (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+@mixin touch-xxl {
+  @media screen and (pointer:coarse), screen and (-moz-touch-enabled), (max-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+@mixin pointer {
+  @media screen and (pointer:fine){
+    @content;
+  }
+}
+@mixin pointer-md {
+  @media screen and (pointer:fine) and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin pointer-lg {
+  @media screen and (pointer:fine) and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin pointer-xl {
+  @media screen and (pointer:fine) and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+@mixin pointer-xxl {
+  @media screen and (pointer:fine) and (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+@mixin position($position, $args) {
+  @if $args == 0 {
+    top:0;
+    left:0
+  }
+  @else {
+    @each $o in top right bottom left {
+      $i: index($args, $o);
+
+      @if $i and $i + 1<= length($args) and type-of(nth($args, $i + 1)) == number  {
+        #{$o}: nth($args, $i + 1);
+      }
+    }
+  }
+  position: $position;
+}
+@mixin absolute($args) {
+  @include position(absolute, $args);
+}
+@mixin fixed($args) {
+  @include position(fixed, $args);
+}
+@mixin relative($args) {
+  @include position(relative, $args);
+}
+@mixin sticky($args) {
+  @include position(sticky, $args);
+}
+
+@mixin comments($margin: 50px, $i: 0) {
+  @if $i < 5 {
+    & ~ .children {
+      > li {
+        > article {
+          margin-left: $margin;
+          @include comments($margin + 50px, $i + 1);
+        }
+      }
+    }
+  }
+}
+
+@mixin screenReader {
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin dashed( $position: bottom, $size: 4px, $color: black) {
+  background-image: linear-gradient(to right,#{$color} 33%,rgba($color,0) 0%);
+  background-position: #{$position};
+  background-size: #{$size} 7px;
+  background-repeat: repeat-x;
+}
+
+@mixin shadow( $color: rgba(34,40,49,0.6), $position: absolute) {
+  content:'';
+  background-color: $color;
+  position: $position;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin lineClamp( $lines: 3 )  {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+@mixin hide {
+  opacity: 0;
+  transition: opacity .5s;
+  will-change: opacity;
+  &.is-inview {
+    opacity: 1;
+  }
+}
+
+@mixin shadow($size: "md") {
+	@if $size == "sm" {
+    box-shadow: 0px 0px 11.3px -27px rgba(0, 0, 0, 0.035),
+      0px 0px 23.4px -27px rgba(0, 0, 0, 0.042),
+      0px 0px 37.3px -27px rgba(0, 0, 0, 0.047),
+      0px 0px 54.8px -27px rgba(0, 0, 0, 0.056),
+      0px 0px 80px -27px rgba(0, 0, 0, 0.1)
+    ;
+  } @else if $type == "md" {
+    box-shadow: 0px 0px 10.4px -30px rgba(0, 0, 0, 0.049),
+      0px 0px 20.9px -30px rgba(0, 0, 0, 0.107),
+      0px 0px 32px -30px rgba(0, 0, 0, 0.166),
+      0px 0px 44.3px -30px rgba(0, 0, 0, 0.22),
+      0px 0px 59.2px -30px rgba(0, 0, 0, 0.265),
+      0px 0px 80px -30px rgba(0, 0, 0, 0.3)
+    ;
+  } @else if $type == "lg" {
+    box-shadow: 0px 0px 40.7px -40px rgba(0, 0, 0, 0.044),
+      0px 0px 54.3px -40px rgba(0, 0, 0, 0.104),
+      0px 0px 61.6px -40px rgba(0, 0, 0, 0.172),
+      0px 0px 67px -40px rgba(0, 0, 0, 0.238),
+      0px 0px 72.9px -40px rgba(0, 0, 0, 0.291),
+      0px 0px 82.4px -40px rgba(0, 0, 0, 0.329),
+      0px 0px 102px -40px rgba(0, 0, 0, 0.35)
+    ;
+  }
+}
+
+@mixin underline {
+  transition:0.2s ease-in-out;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    &:before {
+      transition: transform 200ms cubic-bezier(0,.7,.3,.99);
+      transform-origin:left;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%230C0C0C; stroke-width:1; stroke-linecap:round; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E")
+        0px 50% / 80px 80px repeat-x;
+      animation: waving 3s linear infinite;
+      transform: scaleX(1);
+      @keyframes waving {
+        to {
+          background-position: 80px 50%, 160px 50%;
+        }
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    left: 0;
+    top: calc(50% + 0.5rem);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 200ms cubic-bezier(0,.7,.3,.99);
+    transform-origin: right;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%230C0C0C; stroke-width:1; stroke-linecap:round; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E")
+      0px 50% / 80px 80px repeat-x;
+  }
+}
+
+@mixin fade-up($from) {
+  transition: all 1s .2s;
+  transition-property: left, right, top, opacity;
+  opacity: 0;
+  position: relative;
+  top: 40px;
+  &.is-inview {
+    opacity: 1;
+    top: 0;
+  }
+  @include md {
+    top: 0px;
+    @if $from == "left" {
+      left: -40px;
+    }
+    @if $from == "right" {
+      right: -40px;
+    }
+    &.is-inview {
+      opacity: 1;
+      @if $from == "left" {
+        left: 0;
+      }
+      @if $from == "right" {
+        right: 0;
+      }
+    }
+  }
+}
+
+@mixin transition {
+  transition: all .15s cubic-bezier(0.4,0,0.2,1);
+}
+
+@mixin title( $title ) {
+  @if $title == "h1" {
+    line-height: 1.1;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight:900;
+    font-family:'Mona-Sans-Wide';
+  }
+  @else if $title == "h2" {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  @else if $title == "h3" {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  @else if $title == "h4" {
+    font-size:clamp(1rem, 4vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  @else if $title == "h5" {
+    font-size:clamp(1rem, 4vw, 1.15rem);
+    font-size: 500;
+    line-height: 1.375;
+  }
+}

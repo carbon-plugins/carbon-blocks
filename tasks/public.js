@@ -4,7 +4,7 @@ const mode = require('gulp-mode')();
 module.exports = function (gulp, plugins, config, errorHandler) {
   return function () {
 		const s 		 = plugins.size({ showTotal: false });
-    const styles = gulp.src( 'public/assets/carbon-blocks-public.scss', { allowEmpty: true } )
+    const styles = gulp.src( 'public/assets/scss/carbon-blocks-public.scss', { allowEmpty: true } )
       .pipe( plugins.plumber(errorHandler) )
 			.pipe( mode.development( plugins.sourcemaps.init()) )
 			.pipe(
@@ -17,7 +17,7 @@ module.exports = function (gulp, plugins, config, errorHandler) {
 			.pipe( mode.production( plugins.postcss() ) )
 			.pipe( s )
 			.pipe( plugins.rename({ suffix: '.min' }) )
-			.pipe( gulp.dest( config.build + '/public/assets/' ) )
+			.pipe( gulp.dest( config.build + '/public/assets/css/' ) )
 			.pipe( mode.development( plugins.sourcemaps.write( './maps' )) )
 			.pipe(
 				plugins.notify({

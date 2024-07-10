@@ -1,4 +1,4 @@
-import React from "react";
+import React from "@wordpress/element";
 import Avatar from "boring-avatars";
 import { createRoot } from 'react-dom/client';
 

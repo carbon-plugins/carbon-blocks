@@ -191,7 +191,7 @@ export default function Edit( props ) {
 						removeTab( active )
 						setModalVisibilty( false )
 					} }>{ __( "Yes, I am sure", 'carbon-blocks' ) }</Button>
-					<Button __next40pxDefaultSize isSecondary onClick={ () => setModalVisibilty( false ) }>{ __( "Cancel", 'carbon-blocks' ) }</Button>
+					<Button __next40pxDefaultSize variant='secondary' onClick={ () => setModalVisibilty( false ) }>{ __( "Cancel", 'carbon-blocks' ) }</Button>
 				</section>
 			</Modal>
 		</ConditionalRender>

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './styles/pricing.scss';
 @import './styles/toast.scss';
 @import './styles/theme.scss';
 @import './../../node_modules/driver.js/dist/driver';

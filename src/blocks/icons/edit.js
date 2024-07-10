@@ -526,7 +526,7 @@ export default function Edit(props) {
 								__nextHasNoMarginBottom
 								className='carbon-blocks-icon-modal__preview'
               />
-							<Button isSecondary onClick={ () => setInserterVisibility(true) }>{ icon.isCustom ? __( "Edit custom SVG", 'carbon-blocks' ) : __( "Insert custom SVG", 'carbon-blocks' ) }</Button>
+							<Button variant='secondary' onClick={ () => setInserterVisibility(true) }>{ icon.isCustom ? __( "Edit custom SVG", 'carbon-blocks' ) : __( "Insert custom SVG", 'carbon-blocks' ) }</Button>
 						</header>
 
 						<ul className="carbon-blocks-icon-modal__icons" ref={scrollContainerRef}>
@@ -570,7 +570,7 @@ export default function Edit(props) {
 				onRequestClose={ () => closeInserterModal() }
 				isFullScreen
 			>
-				<Button isSecondary onClick={ () => { closeInserterModal(); setModalVisibilty(true) } } type="submit" className='carbon-blocks-inserter-modal__return'>{ __( "Return to icon list", "carbon-blocks") }</Button>
+				<Button variant='secondary' onClick={ () => { closeInserterModal(); setModalVisibilty(true) } } type="submit" className='carbon-blocks-inserter-modal__return'>{ __( "Return to icon list", "carbon-blocks") }</Button>
 				<section className="carbon-blocks-inserter-modal__content">
 					<section className="carbon-blocks-inserter-modal__inserter">
 						<TextareaControl
@@ -594,8 +594,8 @@ export default function Edit(props) {
 						<footer>
 							<section className="carbon-blocks-inserter-modal__buttons">
 								<ConditionalRender conditions={ svgString }>
-									<Button isSecondary disabled={ !svgString } onClick={ handleInserterPreview } type="submit">{ __( "Preview", 'carbon-blocks' ) }</Button>
-									<Button isPrimary disabled={ !hasPreviewed } onClick={ handleInserterAdd } type="submit">{ __( "Add", 'carbon-blocks' ) }</Button>
+									<Button variant='secondary' disabled={ !svgString } onClick={ handleInserterPreview } type="submit">{ __( "Preview", 'carbon-blocks' ) }</Button>
+									<Button variant='primary' disabled={ !hasPreviewed } onClick={ handleInserterAdd } type="submit">{ __( "Add", 'carbon-blocks' ) }</Button>
 								</ConditionalRender>
 							</section>
 						</footer>

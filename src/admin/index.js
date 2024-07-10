@@ -1,30 +1,32 @@
 import './style.scss';
 import { HashRouter, Route, Routes, useLocation } 			from 'react-router-dom';
-import { useState, useEffect, useCallback, StrictMode } from 'react';
+import { useState, useEffect, useCallback, StrictMode } from '@wordpress/element';
 import { ToastContainer, toast } 												from 'react-toastify';
 import { useImmerReducer } 															from "use-immer";
 import { driver } 																			from "driver.js";
 import { createRoot } 																	from 'react-dom/client';
+import domReady 																				from '@wordpress/dom-ready';
 
-import { ToggleTheme, Menu, Loader, Indicator, Button } from '@carbon-plugins/components';
+import { ThemeToggle, Loader, Indicator, Button, Footer } from '@carbon-plugins/components';
 
+import { Menu } 																				from './components/Menu'
 import apiFetch 																				from "@wordpress/api-fetch";
 import { __ } 																					from '@wordpress/i18n';
 
 import { reducer } 			 from "./helpers/reducers";
-import { config, links } from './helpers/config';
-import Footer 					 from './components/Footer';
+import { config, links } 	from './helpers/config';
 
-import License 		from "./pages/License";
-import Dashboard 	from "./pages/Dashboard";
-import { ConditionalRender } from './components/conditional-render';
+import License 								from "./pages/License";
+import Dashboard 							from "./pages/Dashboard";
+import { ConditionalRender } 	from './components/conditional-render';
 
 function Router() {
   const [ data, setData ]             = useImmerReducer( reducer, {} );
+
   const [ startState, setStartState ] = useState( {} );
   const [ isLoading, setLoading ] 		= useState( false );
   const [ canSave, setCanSave ] 			= useState( false );
-  const [ isErrored, setIsErrored ] 	= useState( false );
+  const [ isErrored, setIsErrored ] 	= useState( undefined );
   const location = useLocation();
 	const driverObj = driver({
 		showProgress: true,
@@ -104,7 +106,6 @@ function Router() {
 
   const checkDirtiness = () => setCanSave( JSON.stringify(startState) !== JSON.stringify(data) );
 
-
   return  (
     <section class="flex flex-col bg-background relative" style={{ minHeight: "calc(100vh - 32px)" }}>
 			<Loader
@@ -116,7 +117,7 @@ function Router() {
 				contactLabel={ __( "Contact us" ) }
 			>
 				<form class={`${isLoading && "opacity-50 pointer-events-none"} relative`} onSubmit={ handleSave }>
-					<nav class="z-50 shadow-md border-b border-border bg-background flex max-sm:flex-col gap-4 items-center max-md:flex-wrap justify-between sticky w-full top-8 z-10">
+					<nav class="z-50 shadow-md border-b border-border bg-background flex max-sm:flex-col gap-4 items-center max-md:flex-wrap justify-between sticky w-full top-8">
 						<Menu links={links} currentPath={location}/>
 						<section className="text-foreground flex flex-wrap gap-2 mr-4 max-md:mb-4 pl-2 md:justify-end">
 							<Indicator
@@ -124,7 +125,7 @@ function Router() {
 								invalidLabel={ __( 'License is not active', 'carbon-blocks' ) }
 								status={ data?.license?.key && data?.license?.isActive }
 							/>
-							<ToggleTheme />
+							<ThemeToggle />
 							<Button disabled={ !canSave } type="submit">
 								<ConditionalRender conditions={ isLoading }>
 									{ __( "Saving", 'carbon-blocks' ) }
@@ -164,22 +165,19 @@ function Router() {
 				pauseOnHover
 			/>
 
-      <Footer />
+			<Footer plugin="carbon-blocks" />
     </section>
   )
 }
 
-document.addEventListener( 'DOMContentLoaded', function() {
-  const element = document.getElementById( config.appId );
-  if( typeof element !== 'undefined' && element !== null ) {
-		const root = createRoot(element);
-    root.render(
-			<StrictMode>
-				<HashRouter basename="/">
-					<Router/>
-				</HashRouter>
-			</StrictMode>,
-			document.getElementById( config.appId )
-		);
-  }
+domReady( function() {
+
+	createRoot(document.getElementById( config.appId )).render(
+		<StrictMode>
+			<HashRouter basename="/">
+				<Router/>
+			</HashRouter>
+		</StrictMode>,
+	);
+
 } );

@@ -13,12 +13,12 @@ import User1 from "/src/assets/images/base64/user-1"
 
 registerBlockType( 'carbon-blocks/signature', {
 	icon: SvgSignature,
-	title: __( "Signature", 'carbon-blocks-pro' ),
-	description: __( "Add a personalized signature at the end of your publications.", 'carbon-blocks-pro' ),
+	title: __( "Signature", 'carbon-blocks' ),
+	description: __( "Add a personalized signature at the end of your publications.", 'carbon-blocks' ),
 	example: {
     attributes: {
-      position: __("CEO", "carbon-blocks-pro"),
-      name: __("John Smith", "carbon-blocks-pro"),
+      position: __("CEO", "carbon-blocks"),
+      name: __("John Smith", "carbon-blocks"),
       style: {
         color: {
           text: "black"

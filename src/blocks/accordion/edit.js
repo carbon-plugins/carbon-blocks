@@ -6,7 +6,7 @@ import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 import {
 	InnerBlocks, useInnerBlocksProps,	useBlockProps, InspectorControls,
-	useSettings
+	useSetting, useSettings
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -29,7 +29,12 @@ export default function Edit( props ) {
 		}
 	});
 
-	const defaultPalette = useSettings( 'color.palette' ) || [];
+	let defaultPalette;
+	if(typeof useSetting != undefined) {
+		defaultPalette = useSetting( 'color.palette' ) || [];
+	} else {
+		defaultPalette = useSettings( 'color.palette' ) || [];
+	}
 
 	const isParentOfSelectedBlock = useSelect( ( select ) => select( 'core/block-editor' ).hasSelectedInnerBlock( clientId, true ) );
 

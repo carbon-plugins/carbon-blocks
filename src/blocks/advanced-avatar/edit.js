@@ -2,13 +2,13 @@
 import Avatar from "boring-avatars";
 import { v4 as uuidv4 } from 'uuid';
 import palettes from 'nice-color-palettes';
+
 // WordPress dependencies
 import { __ } from '@wordpress/i18n';
 import { useRef, useState } from '@wordpress/element';
 import {
 	MediaUpload, MediaUploadCheck, BlockControls,
-
-	InspectorControls, useBlockProps, useSettings, PanelColorSettings
+	InspectorControls, useBlockProps, useSetting, useSettings, PanelColorSettings
 } from '@wordpress/block-editor';
 import {
 	PanelBody, FocalPointPicker, Button, Popover, ColorIndicator,
@@ -33,7 +33,13 @@ export default function Edit( props ) {
 	} = attributes;
 	const { radius } = attributes?.style?.border
 
-	const defaultPalette = useSettings( 'color.palette' ) || [];
+	let defaultPalette, fallbackPalette = ["#805841","#dcf7f3","#fffcdd","#ffd8d8","#f5a2a2"];
+	if(typeof useSettings != undefined) {
+		defaultPalette = useSettings( 'color.palette' ) || fallbackPalette;
+	} else {
+		defaultPalette = useSetting( 'color.palette' ) || fallbackPalette;
+	}
+
 	const colorPalette = defaultPalette.filter(color => color.slug != "base" && color.slug != "contrast")
 	const avatarColors = colorPalette.map(paletteItem => paletteItem.color);
 
@@ -111,44 +117,44 @@ export default function Edit( props ) {
 
 	return <>
 		<InspectorControls>
-			<PanelBody title={ __( "Settings", 'carbon-blocks-pro' ) }>
+			<PanelBody title={ __( "Settings", 'carbon-blocks' ) }>
 				<ToggleGroupControl
 					isBlock
-					label={ __( "Avatar size", "carbon-blocks-pro" ) }
+					label={ __( "Avatar size", "carbon-blocks" ) }
 					value={ size }
 					onChange={ size => setAttributes({ size }) }
 					__nextHasNoMarginBottom
 				>
 					<ToggleGroupControlOption
-						label={ __( "Small", "carbon-blocks-pro" ) }
+						label={ __( "Small", "carbon-blocks" ) }
 						value={ 40 }
 					/>
 					<ToggleGroupControlOption
-						label={ __( "Medium", "carbon-blocks-pro" ) }
+						label={ __( "Medium", "carbon-blocks" ) }
 						value={ 60 }
 					/>
 					<ToggleGroupControlOption
-						label={ __( "Large", "carbon-blocks-pro" ) }
+						label={ __( "Large", "carbon-blocks" ) }
 						value={ 80 }
 					/>
 				</ToggleGroupControl>
 				<ToggleGroupControl
 					isBlock
-					label={ __( "Avatar type", "carbon-blocks-pro" ) }
+					label={ __( "Avatar type", "carbon-blocks" ) }
 					value={ type }
 					onChange={ type => setAttributes({ type }) }
 					__nextHasNoMarginBottom
 				>
 					<ToggleGroupControlOption
-						label={ __( "Shape", "carbon-blocks-pro" ) }
+						label={ __( "Shape", "carbon-blocks" ) }
 						value="shape"
 					/>
 					<ToggleGroupControlOption
-						label={ __( "Image", "carbon-blocks-pro" ) }
+						label={ __( "Image", "carbon-blocks" ) }
 						value="image"
 					/>
 					<ToggleGroupControlOption
-						label={ __( "Initials", "carbon-blocks-pro" ) }
+						label={ __( "Initials", "carbon-blocks" ) }
 						value="initials"
 					/>
 				</ToggleGroupControl>
@@ -161,7 +167,7 @@ export default function Edit( props ) {
 				<ConditionalRender conditions={ type === "shape"}>
 					<ToggleGroupControl
 						isBlock
-						label={ __( "Shape variant", "carbon-blocks-pro" ) }
+						label={ __( "Shape variant", "carbon-blocks" ) }
 						value={ variant }
 						onChange={ variant => setAttributes({
 							variant,
@@ -219,7 +225,7 @@ export default function Edit( props ) {
 							value="bauhaus"
 						/>
 					</ToggleGroupControl>
-					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '-10px', marginBottom: '20px', display: "flex", justifyContent: "center" }} isPrimary onClick={ () => setAttributes({ uuid: uuidv4()}) }>{ __( "Generate a shape", 'carbon-blocks-pro' ) }</Button>
+					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '-10px', marginBottom: '20px', display: "flex", justifyContent: "center" }} variant='primary' onClick={ () => setAttributes({ uuid: uuidv4()}) }>{ __( "Generate a shape", 'carbon-blocks' ) }</Button>
 					<section style={{ display: "flex", gap: "10px", flexWrap: "wrap" }} ref={ colorPickerPopover }>
 						<ColorIndicator colorValue={ palette[0] } onClick={ () => pickColor(0, palette[0]) } className="carbon-palette-picker"/>
 						<ColorIndicator colorValue={ palette[1] } onClick={ () => pickColor(1, palette[1]) } className="carbon-palette-picker"/>
@@ -246,8 +252,8 @@ export default function Edit( props ) {
 							/>
 						</Popover>
 					</ConditionalRender>
-					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '10px', display: "flex", justifyContent: "center" }} isPrimary onClick={() => generateRandomPalette() }>{ __( "Generate a palette", 'carbon-blocks-pro' ) }</Button>
-					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '10px', display: "flex", justifyContent: "center" }} isSecondary onClick={ () => resetPalette() }>{ __( "Reset to default", 'carbon-blocks-pro' ) }</Button>
+					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '10px', display: "flex", justifyContent: "center" }} variant='primary' onClick={() => generateRandomPalette() }>{ __( "Generate a palette", 'carbon-blocks' ) }</Button>
+					<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '10px', display: "flex", justifyContent: "center" }} variant='secondary' onClick={ () => resetPalette() }>{ __( "Reset to default", 'carbon-blocks' ) }</Button>
 				</ConditionalRender>
 				<ConditionalRender conditions={ type === "image"}>
 					<MediaUploadCheck>
@@ -255,9 +261,9 @@ export default function Edit( props ) {
 							onSelect={ image => { setAttributes({ image }) } }
 							allowedTypes={ ['image'] }
 							value={ image }
-							title={ __( "Add an avatar", 'carbon-blocks-pro' ) }
+							title={ __( "Add an avatar", 'carbon-blocks' ) }
 							render={ ( { open } ) => (
-								<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '20px', marginBottom: '20px', display: "flex", justifyContent: "center" }} class="galleryEditor imageButton" isSecondary onClick={ open }>{ hasImage ? __("Edit avatar", 'carbon-blocks-pro' ) : __("Add an avatar", 'carbon-blocks-pro' ) }</Button>
+								<Button __next40pxDefaultSize style={{  width: '100%', marginTop: '20px', marginBottom: '20px', display: "flex", justifyContent: "center" }} class="galleryEditor imageButton" variant='secondary' onClick={ open }>{ hasImage ? __("Edit avatar", 'carbon-blocks' ) : __("Add an avatar", 'carbon-blocks' ) }</Button>
 							) }
 						/>
 					</MediaUploadCheck>
@@ -271,7 +277,7 @@ export default function Edit( props ) {
 							} } )
 						} }
 						type="text"
-						label={ __( "Author name", "carbon-blocks-pro" ) }
+						label={ __( "Author name", "carbon-blocks" ) }
 						__next40pxDefaultSize
 						__unstableInputWidth
 					/>
@@ -285,14 +291,14 @@ export default function Edit( props ) {
 								onChange: color => setAttributes( { initials: {
 									...initials, color
 								} } ),
-								label: __( 'Initials color', 'carbon-blocks-pro' ),
+								label: __( 'Initials color', 'carbon-blocks' ),
 							},
 							{
 								value: initials.background,
 								onChange: background => setAttributes( { initials: {
 									...initials, background
 								} } ),
-								label: __( 'Initials background', 'carbon-blocks-pro' ),
+								label: __( 'Initials background', 'carbon-blocks' ),
 							},
 						] }
 					/>
@@ -355,6 +361,8 @@ export default function Edit( props ) {
 					src={ hasImage || "" }
 					height={ size }
 					width={ size }
+					loading="lazy"
+					decoding="async"
 					style={{
 						...borderStyles,
 						borderRadius: radius,
@@ -367,6 +375,8 @@ export default function Edit( props ) {
 					src={ getInitials(initials, size) }
 					height={ size }
 					width={ size }
+					loading="lazy"
+					decoding="async"
 					style={{
 						...borderStyles,
 						borderRadius: radius

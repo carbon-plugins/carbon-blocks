@@ -17,7 +17,7 @@ export default function save( props ) {
 	let borderStyles;
 
 	const capitalizeFirstLetter = string => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string && string?.charAt(0).toUpperCase() + string?.slice(1);
 	}
 
 	if(isFlatBorder){
@@ -66,6 +66,8 @@ export default function save( props ) {
 				src={ hasImage || "" }
 				height={ size }
 				width={ size }
+				loading="lazy"
+				decoding="async"
 				style={{
 					...borderStyles,
 					borderRadius: radius,
@@ -78,6 +80,8 @@ export default function save( props ) {
 				src={ getInitials(initials, size) }
 				height={ size }
 				width={ size }
+				loading="lazy"
+				decoding="async"
 				style={{
 					...borderStyles,
 					borderRadius: radius

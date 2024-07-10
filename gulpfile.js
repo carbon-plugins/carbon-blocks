@@ -2,13 +2,13 @@ const gulp 					= require('gulp');
 const mode 					= require('gulp-mode')();
 const plugins 			= require('gulp-load-plugins')();
 const pjson 				= require('./package.json');
-const isProduction 	= mode.production();
 const createBundle  = require("./tasks/bundler");
 const config 				 = {
 	dest: 		'../plugins/carbon-blocks/',
 	version: 	pjson.version,
-	build: 		isProduction ? './dist/' 			: './build/',
-	copyPath: isProduction ? './dist/**/*' 	: './build/**/*'
+	slug: 		pjson.name,
+	build: 		'./build/',
+	copyPath: './build/**/*'
 }
 
 const errorHandler = r => {
@@ -20,27 +20,27 @@ function getTask(task) {
 }
 
 const publicScriptsBundler = () => createBundle({
-	entries: 	['./public/assets/carbon-blocks-public.js'],
+	entries: 	['./public/assets/js/carbon-blocks-public.js'],
 	output: 	'carbon-blocks-public.js',
-	dest: 		config.build + 'public/assets/'
+	dest: 		config.build + 'public/assets/js/'
 }, plugins);
 
 const adminScriptsBundler = () => createBundle({
-	entries: 	['./admin/assets/carbon-blocks-admin.js'],
+	entries: 	['./admin/assets/js/carbon-blocks-admin.js'],
 	output: 	'carbon-blocks-admin.js',
-	dest: 		config.build + 'admin/assets/'
+	dest: 		config.build + 'admin/assets/js/'
 }, plugins);
 
 const gutenbergScriptBundler = () => createBundle({
-	entries: 	['./admin/assets/carbon-blocks-gutenberg.js'],
+	entries: 	['./admin/assets/js/carbon-blocks-gutenberg.js'],
 	output: 	'carbon-blocks-gutenberg.js',
-	dest: 		config.build + 'admin/assets/'
+	dest: 		config.build + 'admin/assets/js/'
 }, plugins);
 
 const sliderBundler = () => createBundle({
-	entries: 	['./public/assets/vendor/slider.js'],
-	output: 	'slider.js',
-	dest: 		config.build + 'public/assets/vendor/'
+	entries: 	['./public/assets/vendor/carbon-plugins-slider/carbon-plugins-slider.js'],
+	output: 	'carbon-plugins-slider.js',
+	dest: 		config.build + 'public/assets/vendor/carbon-plugins-slider/'
 }, plugins);
 
 gulp.task('admin', 			getTask('admin'));
@@ -63,12 +63,12 @@ gulp.task('default', gulp.series('admin', 'public', 'vendor', 'php', 'publicScri
 	gulp.watch(['./languages/**/*'], 																												gulp.series('languages'));
 	gulp.watch(['./admin/**/*.php','./includes/**/*.php', './*.php','!./build/**/*.php'], 	gulp.series('php'));
 	gulp.watch(['./admin/assets/**/*.scss'], 																								gulp.series('admin'));
-	gulp.watch(['./admin/assets/carbon-blocks-admin.js'], 																	gulp.series('adminScripts'));
-	gulp.watch(['./admin/assets/carbon-blocks-gutenberg.js'], 															gulp.series('gutenbergScript'));
+	gulp.watch(['./admin/assets/js/carbon-blocks-admin.js'], 																gulp.series('adminScripts'));
+	gulp.watch(['./admin/assets/js/carbon-blocks-gutenberg.js'], 														gulp.series('gutenbergScript'));
 	gulp.watch(['./public/assets/**/*.scss'], 																							gulp.series('public'));
 	gulp.watch(['./public/assets/**/*.js'], 																								gulp.series('publicScripts'));
 	gulp.watch(['./public/assets/vendor/**/*.scss'], 																				gulp.series('vendor'));
-	gulp.watch(['./public/assets/vendor/slider.js'], 																				gulp.series('slider'));
+	gulp.watch(['./public/assets/js/vendor/carbon-plugins-slider.js'], 											gulp.series('slider'));
 	gulp.watch(['./readme.txt'], 																														gulp.series('readme'));
 }));
 

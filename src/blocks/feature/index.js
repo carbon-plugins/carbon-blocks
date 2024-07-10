@@ -35,7 +35,7 @@ registerBlockType( 'carbon-blocks/feature', {
       {
         name: 'core/heading',
         attributes: {
-          content: __("Find your next home", "carbon-blocks-pro"),
+          content: __("Find your next home", "carbon-blocks"),
           style: {
             color: {
               text: "black"
@@ -46,7 +46,7 @@ registerBlockType( 'carbon-blocks/feature', {
       {
         name: 'core/paragraph',
         attributes: {
-          content: __("Explore thousands of properties for sale or rent. From apartments to houses, find your ideal home in just a few clicks.", "carbon-blocks-pro"),
+          content: __("Explore thousands of properties for sale or rent. From apartments to houses, find your ideal home in just a few clicks.", "carbon-blocks"),
           style: {
             color: {
               text: "black"
@@ -60,7 +60,7 @@ registerBlockType( 'carbon-blocks/feature', {
           {
             name: 'carbon-blocks/advanced-button',
             attributes: {
-              text: __('Discover', 'carbon-blocks-pro'),
+              text: __('Discover', 'carbon-blocks'),
               style: {
                 color: {
                   background: "white",

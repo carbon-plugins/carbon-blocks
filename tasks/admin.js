@@ -4,7 +4,7 @@ const mode = require('gulp-mode')();
 module.exports = function (gulp, plugins, config, errorHandler) {
   return function () {
 		const s 		 = plugins.size({ showTotal: false });
-		const styles = gulp.src([ 'admin/assets/carbon-blocks-gutenberg.scss', 'admin/assets/carbon-blocks-dashboard.scss', 'admin/assets/carbon-blocks-admin.scss'], { allowEmpty: true })
+		const styles = gulp.src([ 'admin/assets/scss/carbon-blocks-gutenberg.scss', 'admin/assets/scss/carbon-blocks-dashboard.scss', 'admin/assets/scss/carbon-blocks-admin.scss'], { allowEmpty: true })
 			.pipe( plugins.plumber(errorHandler) )
 			.pipe( mode.development( plugins.sourcemaps.init()) )
 			.pipe(
@@ -18,7 +18,7 @@ module.exports = function (gulp, plugins, config, errorHandler) {
 			.pipe( mode.development( plugins.sourcemaps.write( './maps' )) )
 			.pipe( s )
 			.pipe( plugins.rename({ suffix: '.min' }) )
-			.pipe( gulp.dest( config.build + '/admin/assets/' ) )
+			.pipe( gulp.dest( config.build + '/admin/assets/css' ) )
 			.pipe(
 				plugins.notify({
 					message:() => `✅ Admin Styles : ${s.prettySize}`,

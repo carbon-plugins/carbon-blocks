@@ -4,7 +4,7 @@ const mode = require('gulp-mode')();
 module.exports = function (gulp, plugins, config, errorHandler) {
   return function () {
 		const s = plugins.size({showTotal: false});
-    return gulp.src(['public/assets/vendor/slider.scss'], {allowEmpty: true})
+    return gulp.src(['public/assets/vendor/carbon-plugins-slider/carbon-plugins-slider.scss'], {allowEmpty: true})
 		.pipe( plugins.plumber(errorHandler) )
 		.pipe(
 			sass({
@@ -16,7 +16,7 @@ module.exports = function (gulp, plugins, config, errorHandler) {
 		.pipe( mode.production( plugins.postcss() ))
 		.pipe( s )
 		.pipe( plugins.rename({ suffix: '.min' }) )
-		.pipe( gulp.dest( config.build + '/public/assets/vendor/' ) )
+		.pipe( gulp.dest( config.build + '/public/assets/vendor/carbon-plugins-slider/' ) )
 		.pipe(
 			plugins.notify({
 				message:() => `✅ Vendor : ${s.prettySize}`,

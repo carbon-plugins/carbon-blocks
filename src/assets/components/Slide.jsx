@@ -74,6 +74,7 @@ export default function Slide({ children, blockProps, clientId, showSettingButto
 		</BlockControls>
 		<ConfirmDialog
 			isOpen={ isDeleteModalOpen }
+			isDestructive
 			onConfirm={ () => {
 				removeSlide( clientId );
 				setDeleteModalVisibilty( false );

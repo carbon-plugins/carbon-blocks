@@ -77,7 +77,7 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 						onRequestClose={  () => setModalVisibilty( false )  }
 					>
 						<Button __next40pxDefaultSize
-							isPrimary
+							variant='primary'
 							style={{ textAlign: "center", display: "block", width: "100%"}}
 							onClick={ previewAnimation }
 							ref={ replayButtonRef }
@@ -104,7 +104,7 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 								help={ __('Delay and repeat are not visible in preview.', 'carbon-blocks' ) }
 							>
 								<Button __next40pxDefaultSize
-									isPrimary
+									variant='primary'
 									style={{ textAlign: "center", display: "block", width: "100%"}}
 									onClick={ previewAnimation }
 								>
@@ -185,9 +185,9 @@ const animation = createHigherOrderComponent( ( BlockEdit ) => {
 													step={ 100 }
 													onChange={ duration => setAttributes( { animation: { ...animation, duration } } ) }
 												/>
-												{/* <Button __next40pxDefaultSize isDestructive style={{ display:"block", textAlign: "center", width: "100%" }} onClick={ reset }>
+												<Button __next40pxDefaultSize isDestructive style={{ display:"block", textAlign: "center", width: "100%" }} onClick={ reset }>
 													{ __( 'Reset timings to default', 'carbon-blocks' ) }
-												</Button> */}
+												</Button>
 											</PanelBody>
 											case 'easing': return <PanelBody>
 												<BaseControl

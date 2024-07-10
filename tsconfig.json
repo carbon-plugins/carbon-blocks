@@ -1,10 +1,38 @@
 {
 	"compilerOptions": {
-		"jsx": "react",
+		"target": "esnext",
+		"module": "esnext",
+		"jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./*"]
-		}
+		},
+		"lib": [
+			"dom",
+			"es2017",
+			"es2017.object",
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		],
+		"allowJs": true,
+		"checkJs": false,
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"declarationMap": true,
+		"composite": true,
+		"emitDeclarationOnly": true,
+		"isolatedModules": true,
+		"strict": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"esModuleInterop": false,
+		"resolveJsonModule": true,
+		"typeRoots": [ "./typings", "./node_modules/@types" ],
+		"types": []
 	},
 	"include": ["src/admin/**/*"],
 	"exclude": ["node_modules"]

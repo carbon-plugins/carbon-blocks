@@ -1,4 +1,4 @@
-import Lightbox from "./../../../public/assets/vendor/lightbox.js";
+import Lightbox from "./../../../public/assets/vendor/lightbox/lightbox.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 	if(document.querySelector('[data-single-lightbox]')) {

@@ -7,6 +7,10 @@ export const reducer = (draft, a) => {
       draft.license 		= a.data.license;
       break;
     }
+		case "SET_OPTIONS": {
+      draft.options = a.options;
+      break;
+    }
 		case "toggle_delete_all_on_remove": {
 			draft.options.deleteAllOnRemove = !draft.options.deleteAllOnRemove
 			break;

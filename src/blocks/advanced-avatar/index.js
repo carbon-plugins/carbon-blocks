@@ -15,8 +15,8 @@ const randomNumber = Math.floor(Math.random() * 101);
 
 registerBlockType( 'carbon-blocks/advanced-avatar', {
 	icon: IconAdvancedAvatar,
-	title: __( "Advanced avatar", 'carbon-blocks-pro' ),
-	description: __( "Showcase unique avatars by choosing from various shapes, importing a photo, or using initials.", 'carbon-blocks-pro' ),
+	title: __( "Advanced avatar", 'carbon-blocks' ),
+	description: __( "Showcase unique avatars by choosing from various shapes, importing a photo, or using initials.", 'carbon-blocks' ),
 	example: {
     attributes: {
 			palette: palettes[randomNumber],

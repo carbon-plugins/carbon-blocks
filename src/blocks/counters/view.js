@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		window.requestAnimationFrame(step);
 	}
 
-	if(document.querySelector('.wp-block-carbon-blocks-counter')) {
-		document.querySelectorAll('.wp-block-carbon-blocks-counter').forEach(counters => {
+	if(document.querySelector('.wp-block-carbon-blocks-counters')) {
+		document.querySelectorAll('.wp-block-carbon-blocks-counters').forEach(counters => {
 			const speed = 1000; let more = 0;
-			counters.querySelectorAll('.wp-block-carbon-blocks-counter-item').forEach(counter => {
+			counters.querySelectorAll('.wp-block-carbon-blocks-counter').forEach(counter => {
 				counter.addEventListener('anim:in', ({ detail }) => {
 					more = more + 400;
 					const value = + counter.querySelector('dt span').innerHTML;

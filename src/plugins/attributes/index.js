@@ -1,8 +1,9 @@
 import { __ } from '@wordpress/i18n';
+import { assign } from 'lodash';
 
 const attributes = ( settings, name ) => {
 	if( ( name.startsWith( 'core/') || name.startsWith( 'carbon-blocks/') ) && settings?.attributes?.animation === undefined ){
-		settings.attributes = lodash.assign( {}, settings.attributes, {
+		settings.attributes = assign( {}, settings.attributes, {
 			animation: {
 				type: 'object',
 				default: {
@@ -18,18 +19,16 @@ const attributes = ( settings, name ) => {
 	}
 
 	if( ( name.startsWith( 'core/') || name.startsWith( 'carbon-blocks/') ) && settings?.attributes?.showActions === undefined ){
-		settings.attributes = lodash.assign( {}, settings.attributes, {
+		settings.attributes = assign( {}, settings.attributes, {
 			showActions: {
 				type: 'boolean',
 				default: true
 			}
 		} )
 	}
-	
+
 	return settings;
 }
-
-
 
 wp.hooks.addFilter(
 	'blocks.registerBlockType',

@@ -9,19 +9,37 @@ import "../../assets/styles/slider.scss";
 export default function Slider({ children, blockProps, clientId, attributes }) {
 	const { settings, effect, navigation, pagination, autoplay, freeMode, controls, accessibility } = attributes;
 	const tag = `.editor-styles-wrapper [data-block="${clientId}"]`;
-	let isExample = true;
+	let isIframe = true;
 	let doc = window.document, slider, sliderTag = tag;
 
 	const classes = classnames( blockProps.className, { 'carbon-slider': true, 'swiper': true } );
 	blockProps.className = classes;
 
 	useEffect(() => {
-		if(document.querySelector('.block-editor-block-preview__content')) {
+
+		if(document.querySelector('.edit-post-visual-editor')) {
+			// Post editor
+			doc = document.querySelector('.edit-post-visual-editor');
+			if(document.querySelector('.edit-post-visual-editor iframe')) {
+				// Playground editor
+			isIframe = true
+				doc = document.querySelector('.edit-post-visual-editor iframe').contentWindow.document;
+			}
+		} else if(document.querySelector('.edit-site-visual-editor')) {
+			// Global site editor
+			isIframe = true
+			doc = document.querySelector('.edit-site-visual-editor iframe').contentWindow.document;
+		} else if(document.querySelector('.edit-site-editor-canvas-container')) {
+			// Global style editor
+			isIframe = true
+			doc = document.querySelector('.edit-site-editor-canvas-container iframe').contentWindow.document;
+		} else if(document.querySelector('.block-editor-block-preview__content')) {
+			// Example
+			isIframe = true
 			doc = document.querySelector(".block-editor-block-preview__content iframe").contentWindow.document;
-			sliderTag = doc.querySelector(tag);
-		} else {
-			isExample = false;
 		}
+
+		sliderTag = doc.querySelector(tag);
 	}, []);
 
 	useEffect(() => {
@@ -69,7 +87,7 @@ export default function Slider({ children, blockProps, clientId, attributes }) {
 		});
 
 		return () => {
-			if(!isExample && slider) {
+			if(!isIframe && slider) {
 				slider.destroy();
 			}
 		};
@@ -89,12 +107,16 @@ export default function Slider({ children, blockProps, clientId, attributes }) {
 
 		const sliderEl = doc.querySelector(tag);
 
-    sliderEl.addEventListener('addSlide', handleAddSlide);
-    sliderEl.addEventListener('duplicateSlide', handleDuplicateSlide);
+		if(sliderEl) {
+			sliderEl.addEventListener('addSlide', handleAddSlide);
+			sliderEl.addEventListener('duplicateSlide', handleDuplicateSlide);
+		}
 
     return () => {
-      sliderEl.removeEventListener('addSlide', handleAddSlide);
-			sliderEl.removeEventListener('duplicateSlide', handleDuplicateSlide);
+			if(sliderEl) {
+				sliderEl.removeEventListener('addSlide', handleAddSlide);
+				sliderEl.removeEventListener('duplicateSlide', handleDuplicateSlide);
+			}
     };
   }, [slider]);
 

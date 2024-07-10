@@ -53,7 +53,7 @@ export default function Edit( props ) {
 
 	return <>
 		<InspectorControls>
-			<PanelBody title={ __( "Settings", 'carbon-blocks-pro' ) }>
+			<PanelBody title={ __( "Settings", 'carbon-blocks' ) }>
 				<DirectionControl
 					value={ direction }
 					onChange={ direction => setAttributes({direction }) }
@@ -63,19 +63,19 @@ export default function Edit( props ) {
 					onChange={ alignment => setAttributes({ alignment }) }
 				/>
 				<Toggle
-					label={ __( "Show avatar", 'carbon-blocks-pro' ) }
+					label={ __( "Show avatar", 'carbon-blocks' ) }
 					value={ showAvatar }
           disabled={ isDisabled && showAvatar }
 					onChange={ showAvatar => setAttributes({ showAvatar }) }
 				/>
 				<Toggle
-					label={ __( "Show name", 'carbon-blocks-pro' ) }
+					label={ __( "Show name", 'carbon-blocks' ) }
 					value={ showName }
           disabled={ isDisabled && showName }
 					onChange={ showName => setAttributes({ showName }) }
 				/>
 				<Toggle
-					label={ __( "Show position", 'carbon-blocks-pro' ) }
+					label={ __( "Show position", 'carbon-blocks' ) }
 					value={ showPosition }
           disabled={ isDisabled && showPosition }
 					onChange={ showPosition => setAttributes({ showPosition }) }
@@ -92,7 +92,7 @@ export default function Edit( props ) {
 						tagName="cite"
 						value={ name }
 						onChange={ name => { setAttributes( { name } ) } }
-						placeholder={ __( "Name", 'carbon-blocks-pro' ) }
+						placeholder={ __( "Name", 'carbon-blocks' ) }
 						allowedFormats={ [ 'core/bold', 'core/italic' ] }
 						style={{ textAlign: alignment }}
 					/>
@@ -102,7 +102,7 @@ export default function Edit( props ) {
 						tagName="cite"
 						value={ position }
 						onChange={ position => { setAttributes( { position } ) } }
-						placeholder={ __( "Position", 'carbon-blocks-pro' ) }
+						placeholder={ __( "Position", 'carbon-blocks' ) }
 						allowedFormats={ [ 'core/bold', 'core/italic' ] }
 						style={{ textAlign: alignment }}
 					/>
